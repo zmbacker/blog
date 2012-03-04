@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Lester Zhao's Blog]]></title>
-  <link href="http://zmbacker.github.com/blog/atom.xml" rel="self"/>
+  <title><![CDATA[Category: TEST | Lester Zhao's Blog]]></title>
+  <link href="http://zmbacker.github.com/blog/blog/categories/test/atom.xml" rel="self"/>
   <link href="http://zmbacker.github.com/blog/"/>
   <updated>2012-03-05T00:27:57+08:00</updated>
   <id>http://zmbacker.github.com/blog/</id>
