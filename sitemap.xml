@@ -2,20 +2,20 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://zmbacker.github.com/blog/blog/2012/03/05/test-the-first-blog-post-with-octopress/
+            http://lester.youyou100.com//blog/2012/03/05/test-the-first-blog-post-with-octopress/
         </loc>
         <lastmod>2012-03-05T00:14:00+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zmbacker.github.com/blog/blog/archives/</loc>
+        <loc>http://lester.youyou100.com//blog/archives/</loc>
         <lastmod>2012-03-05T00:14:00+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zmbacker.github.com/blog/</loc>
+        <loc>http://lester.youyou100.com//</loc>
         <lastmod>2012-03-05T00:14:00+08:00</lastmod>
     </url>
     <url>
-        <loc>http://zmbacker.github.com/blog/test/page.html</loc>
+        <loc>http://lester.youyou100.com//test/page.html</loc>
         <lastmod>2012-03-05T00:14:49+08:00</lastmod>
     </url>
 </urlset>

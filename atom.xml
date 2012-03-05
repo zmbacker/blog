@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Lester Zhao's Blog]]></title>
-  <link href="http://zmbacker.github.com/blog/atom.xml" rel="self"/>
-  <link href="http://zmbacker.github.com/blog/"/>
-  <updated>2012-03-06T00:08:52+08:00</updated>
-  <id>http://zmbacker.github.com/blog/</id>
+  <link href="http://lester.youyou100.com//atom.xml" rel="self"/>
+  <link href="http://lester.youyou100.com//"/>
+  <updated>2012-03-06T00:25:09+08:00</updated>
+  <id>http://lester.youyou100.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[test the first blog post with octopress]]></title>
-    <link href="http://zmbacker.github.com/blog/blog/2012/03/05/test-the-first-blog-post-with-octopress/"/>
+    <link href="http://lester.youyou100.com//blog/2012/03/05/test-the-first-blog-post-with-octopress/"/>
     <updated>2012-03-05T00:11:00+08:00</updated>
-    <id>http://zmbacker.github.com/blog/blog/2012/03/05/test-the-first-blog-post-with-octopress</id>
+    <id>http://lester.youyou100.com//blog/2012/03/05/test-the-first-blog-post-with-octopress</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
