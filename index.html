@@ -9,9 +9,8 @@
   <meta name="author" content="Lester Zhao">
 
   
-  <meta name="description" content="Hello World！
-世界你好， 我又要重新开始写Blog了。
-">
+  <meta name="description" content="用ssh端口转发做为代理 fan qiang 很久了，一直都是手动运行脚本的，我的MBA基本上是不关机的，重来都是用完直接扣下屏幕。
+但每次打开之后都需要重新运行一下ssh -D 脚本， 作为一个会写代码的人来说显得还是不够专业。所以我决定要充分发挥我的主观能动性， 让我的电脑更智能。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +83,120 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">Autossh+launchd 实现全自动 Ssh -D 端口转发 Socks5 代理</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-29T21:55:00+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>用ssh端口转发做为代理 fan qiang 很久了，一直都是手动运行脚本的，我的MBA基本上是不关机的，重来都是用完直接扣下屏幕。
+但每次打开之后都需要重新运行一下ssh -D 脚本， 作为一个会写代码的人来说显得还是不够专业。所以我决定要充分发挥我的主观能动性， 让我的电脑更智能。 目前已经可以良好的运行了。</p>
+
+<p>废话少说我直接进入主题。</p>
+
+<p>我的系统是：Mac OS X Lion</p>
+
+<p>首先要介绍几个名词：<br/>
+ssh端口转发：是一种利用ssh隧道链接建立的sock5代理。 <br/>
+launchd： Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
+autossh：是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
+
+<p>首先需要设置使用密钥链接 ssh 主机， 这样做的目的是链接主机的时候不用输入密码的环节。<br/>
+其次你还需要 Homebrew 或者 MacPorts 用来安装 autossh。<br/>
+我是用 Homebrew 安装的，打开终端。</p>
+
+<p>执行如下命令： <code>brew install autossh</code><br/>
+稍等片刻很快就会完成安装。</p>
+
+<p>终端下输入：<br/>
+<code>autossh -M 8118 -nNT -D 8117 root@sshhost.com</code><br/>
+注意其中 8117是你最终的socks5端口，root是你链接ssh的账号，sshhost.com是你的ssh主机地址（也可以是ip地址）。将这些内容替换成你可以正常使用的信息。<br/>
+-nNT这个几个参数最好保持，另外最好不要增加-f参数，如果增加了launchd就有可能不能进行正确管理。</p>
+
+<p>执行上面命令之后我们要达到的效果是：没有返回结果，并且命令不结束，socks5可用（可以用 SwitchySharp for Chrome测试）。<br/>
+这说明autossh ssh -D 已经没有问题。下面我们要做的就是用 launchd 来管理之。<br/>
+按 Ctrl + c 退出刚才状态。</p>
+
+<p>接下来要用你习惯的文本编辑器创建下面这个文件：<br/>
+~/Library/LaunchAgents/ssh-d.plist
+我是用 Sublime Text 2 创建的。</p>
+
+<p>文件的内容如下：</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+  &lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+      &lt;string&gt;localdomain.localhost.ssh-d&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+      &lt;array&gt;
+        &lt;string&gt;/usr/local/bin/autossh&lt;/string&gt;
+        &lt;string&gt;-M&lt;/string&gt;
+        &lt;string&gt;8118&lt;/string&gt;
+        &lt;string&gt;-nNT&lt;/string&gt;
+        &lt;string&gt;-D&lt;/string&gt;
+        &lt;string&gt;8117&lt;/string&gt;
+        &lt;string&gt;root@sshhost.com&lt;/string&gt;
+      &lt;/array&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;key&gt;StandardOutPath&lt;/key&gt;
+      &lt;string&gt;/var/log/ssh-d-out.log&lt;/string&gt;
+    &lt;key&gt;StandardErrorPath&lt;/key&gt;
+      &lt;string&gt;/var/log/ssh-d-err.log&lt;/string&gt;
+  &lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>打开终端执行命令： <br/>
+<code>launchctl load ~/Library/LaunchAgents/ssh-d.plist</code></p>
+
+<p>然后检查 socks 代理是否可以使用。
+如果不可以使用，打开 Mac 系统的控制台程序，查看日志有无相关错误。</p>
+
+<p>到目前为止，以后我们就可以很轻松的使用代理了，而且不用操心代理是否链接的问题，系统会自动去帮你检查。</p>
+
+<p>可以使用下面命令查看你的ssh进程情况：<br/>
+<code>ps -auxww |grep 8117</code></p>
+
+<p>下面命令是用来去掉launchd进行管理的：<br/>
+<code>launchctl unload ~/Library/LaunchAgents/ssh-d.plist</code></p>
+
+<p>参考文章：<br/>
+<a href="http://dipplum.com/2010/09/12/launchd-plist-for-ssh-d/">自动连接ssh -D的launchd配置</a><br/>
+<a href="http://blog.hebine.com/archives/1621.html">Mac下开机自动连接ssh -D</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/03/05/test-the-first-blog-post-with-octopress/">Test the First Blog Post With Octopress</a></h1>
     
     
@@ -127,6 +240,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">autossh+launchd 实现全自动 ssh -D 端口转发 socks5 代理</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/03/05/test-the-first-blog-post-with-octopress/">test the first blog post with octopress</a>
