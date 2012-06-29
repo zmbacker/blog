@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TEST | Lester Zhao's Blog]]></title>
   <link href="http://lester.youyou100.com//blog/categories/test/atom.xml" rel="self"/>
   <link href="http://lester.youyou100.com//"/>
-  <updated>2012-03-08T22:44:45+08:00</updated>
+  <updated>2012-06-29T21:24:34+08:00</updated>
   <id>http://lester.youyou100.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -18,7 +18,8 @@
     <link href="http://lester.youyou100.com//blog/2012/03/05/test-the-first-blog-post-with-octopress/"/>
     <updated>2012-03-05T00:11:00+08:00</updated>
     <id>http://lester.youyou100.com//blog/2012/03/05/test-the-first-blog-post-with-octopress</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Hello World！
+世界你好， 我又要重新开始写Blog了。</p>
 ]]></content>
   </entry>
   
