@@ -4,7 +4,7 @@
   <title><![CDATA[Category: autossh | Lester Zhao's Blog]]></title>
   <link href="http://lester.youyou100.com//blog/categories/autossh/atom.xml" rel="self"/>
   <link href="http://lester.youyou100.com//"/>
-  <updated>2012-06-29T23:48:18+08:00</updated>
+  <updated>2012-07-01T09:13:21+08:00</updated>
   <id>http://lester.youyou100.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -29,6 +29,9 @@
 ssh端口转发：是一种利用ssh隧道链接建立的sock5代理。 <br/>
 launchd： Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
 autossh：是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
+
+<!--more-->
+
 
 <p>首先需要设置使用密钥链接 ssh 主机， 这样做的目的是链接主机的时候不用输入密码的环节。<br/>
 其次你还需要 Homebrew 或者 MacPorts 用来安装 autossh。<br/>

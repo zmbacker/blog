@@ -118,102 +118,12 @@ ssh端口转发：是一种利用ssh隧道链接建立的sock5代理。 <br/>
 launchd： Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
 autossh：是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
 
-<p>首先需要设置使用密钥链接 ssh 主机， 这样做的目的是链接主机的时候不用输入密码的环节。<br/>
-其次你还需要 Homebrew 或者 MacPorts 用来安装 autossh。<br/>
-我是用 Homebrew 安装的，打开终端。</p>
-
-<p>执行如下命令： <code>brew install autossh</code><br/>
-稍等片刻很快就会完成安装。</p>
-
-<p>终端下输入：<br/>
-<code>autossh -M 8118 -nNT -D 8117 root@sshhost.com</code><br/>
-注意其中 8117是你最终的socks5端口，root是你链接ssh的账号，sshhost.com是你的ssh主机地址（也可以是ip地址）。将这些内容替换成你可以正常使用的信息。<br/>
--nNT这个几个参数最好保持，另外最好不要增加-f参数，如果增加了launchd就有可能不能进行正确管理。</p>
-
-<p>执行上面命令之后我们要达到的效果是：没有返回结果，并且命令不结束，socks5可用（可以用 SwitchySharp for Chrome测试）。<br/>
-这说明autossh ssh -D 已经没有问题。下面我们要做的就是用 launchd 来管理之。<br/>
-按 Ctrl + c 退出刚才状态。</p>
-
-<p>接下来要用你习惯的文本编辑器创建下面这个文件：<br/>
-~/Library/LaunchAgents/ssh-d.plist
-我是用 Sublime Text 2 创建的。</p>
-
-<p>文件的内容如下：</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>  <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-</span><span class='line'>  <span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;dict&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;string&gt;</span>localdomain.localhost.ssh-d<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;array&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>/usr/local/bin/autossh<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>-M<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>8118<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>-nNT<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>-D<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>8117<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>root@sshhost.com<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;/array&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>KeepAlive<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;true/&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;true/&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>StandardOutPath<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;string&gt;</span>/var/log/ssh-d-out.log<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>StandardErrorPath<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;string&gt;</span>/var/log/ssh-d-err.log<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/dict&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/plist&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>打开终端执行命令： <br/>
-<code>launchctl load ~/Library/LaunchAgents/ssh-d.plist</code></p>
-
-<p>然后检查 socks 代理是否可以使用。
-如果不可以使用，打开 Mac 系统的控制台程序，查看日志有无相关错误。</p>
-
-<p>到目前为止，以后我们就可以很轻松的使用代理了，而且不用操心代理是否链接的问题，系统会自动去帮你检查。</p>
-
-<p>可以使用下面命令查看你的ssh进程情况：<br/>
-<code>ps -auxww |grep 8117</code></p>
-
-<p>下面命令是用来去掉launchd进行管理的：<br/>
-<code>launchctl unload ~/Library/LaunchAgents/ssh-d.plist</code></p>
-
-<p>参考文章：<br/>
-<a href="http://dipplum.com/2010/09/12/launchd-plist-for-ssh-d/">自动连接ssh -D的launchd配置</a><br/>
-<a href="http://blog.hebine.com/archives/1621.html">Mac下开机自动连接ssh -D</a></p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">Read on &rarr;</a>
+    </footer>
   
 
 
