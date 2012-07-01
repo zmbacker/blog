@@ -4,7 +4,7 @@
   <title><![CDATA[Category: launchd | Lester Zhao's Blog]]></title>
   <link href="http://lester.youyou100.com//blog/categories/launchd/atom.xml" rel="self"/>
   <link href="http://lester.youyou100.com//"/>
-  <updated>2012-07-01T11:11:37+08:00</updated>
+  <updated>2012-07-01T11:14:36+08:00</updated>
   <id>http://lester.youyou100.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -26,9 +26,9 @@
 <p>我的系统是：Mac OS X Lion</p>
 
 <p>首先要介绍几个名词：<br/>
-<em>ssh端口转发：</em> 是一种利用ssh隧道链接建立的sock5代理。 <br/>
-launchd： Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
-autossh：是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
+<strong>ssh端口转发：</strong> 是一种利用ssh隧道链接建立的sock5代理。 <br/>
+<strong>launchd：</strong> Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
+<strong>autossh：</strong>是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
 
 <!--more-->
 
@@ -37,7 +37,8 @@ autossh：是用来保持 ssh 一直处于链接状态的工具。可以在链�
 其次你还需要 Homebrew 或者 MacPorts 用来安装 autossh。<br/>
 我是用 Homebrew 安装的，打开终端。</p>
 
-<p>执行如下命令： <code>brew install autossh</code><br/>
+<p>执行如下命令：<br/>
+<code>brew install autossh</code><br/>
 稍等片刻很快就会完成安装。</p>
 
 <p>终端下输入：<br/>
