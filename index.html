@@ -9,8 +9,10 @@
   <meta name="author" content="Lester Zhao">
 
   
-  <meta name="description" content="用ssh端口转发做为代理 fan qiang 很久了，一直都是手动运行脚本的，我的MBA基本上是不关机的，重来都是用完直接扣下屏幕。
-但每次打开之后都需要重新运行一下ssh -D 脚本， 作为一个会写代码的人来说显得还是不够专业。所以我决定要充分发挥我的主观能动性， 让我的电脑更智能。 &hellip;">
+  <meta name="description" content="最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一些折腾才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。 问题现象：
+使用 TM2 ruby 1.9.3 ruby 2.0.1
+Git Bundle 可以正常工作。
+安装 TM Ctag &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +80,153 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/">TextMate 2 下 Ctag 和 Git Bundle 同时工作</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-21T00:20:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一些折腾才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
+
+<p>问题现象：
+使用 TM2 ruby 1.9.3 ruby 2.0.1
+Git Bundle 可以正常工作。
+安装 TM Ctag Bundle 之后 ^ + Command + P 报异常大概如下:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">308</span><span class="p">:</span> <span class="k">in</span> <span class="sb">`to_plist&#39;: An object in the argument tree could not be converted (ArgumentError)</span>
+</span><span class='line'><span class="sb">     from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:308:in `</span><span class="n">block</span> <span class="k">in</span> <span class="kp">initialize</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">     from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `popen&#39;</span>
+</span><span class='line'>      <span class="n">from</span> <span class="sr">/Users/</span><span class="n">backer</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">307</span><span class="ss">:in</span> <span class="sb">`initialize&#39;</span>
+</span><span class='line'><span class="sb">     from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `</span><span class="kp">new</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">     from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `dialog&#39;</span>
+</span><span class='line'>      <span class="n">from</span> <span class="sr">/Users/</span><span class="n">backer</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">progress</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">42</span><span class="ss">:in</span> <span class="sb">`call_with_progress&#39;</span>
+</span><span class='line'><span class="sb">     from /Users/backer/_test_tm.rb:12:in `</span><span class="o">&lt;</span><span class="n">main</span><span class="o">&gt;</span><span class="err">&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中关键是: ui.rb:308: in `to_plist&#8217;: An object in the argument tree could not be converted
+如果你的异常是这个那么可以肯定的时候和我的情况一直。下面是我的一个临时解决方案。</p>
+
+<p>这个 bug 的解决有争议，TextMate 社区认为是 Ruby 的 bug，但网络上另一个解决方案认为是 TextMate 的 bug。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx
+</span><span class='line'>git clone git://github.com/kballard/osx-plist.git
+</span><span class='line'><span class="nb">cd </span>osx-plist/ext/plist
+</span><span class='line'>ruby extconf.rb <span class="o">&amp;&amp;</span> make
+</span><span class='line'><span class="nb">cd</span> ../../../
+</span><span class='line'>mv plist.bundle plist.bundle.old
+</span><span class='line'>cp osx-plist/ext/plist/plist.bundle ./plist.bundle
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样Ctag是可以正常运行的，但是会导致 Git Bundle 报错：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>dyld: lazy symbol binding failed: Symbol not found: _rb_intern2 Referenced from: /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
+</span><span class='line'>dyld: Symbol not found: _rb_intern2 Referenced from: /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我的一个临时解决方案是：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx
+</span><span class='line'>git clone git://github.com/kballard/osx-plist.git
+</span><span class='line'><span class="nb">cd </span>osx-plist/ext/plist
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>打开 osx-plist/ext/plist 下的 plist.c 找到：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * Document-class: OSX::PropertyListError</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">Init_plist</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">mOSX</span> <span class="o">=</span> <span class="n">rb_define_module</span><span class="p">(</span><span class="s">&quot;OSX&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">mPlist</span> <span class="o">=</span> <span class="n">rb_define_module_under</span><span class="p">(</span><span class="n">mOSX</span><span class="p">,</span> <span class="s">&quot;PropertyList&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>将 <code>void Init_plist() {</code> 改为 <code>void Init_plist2() {</code> 后执行：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby extconf.rb <span class="o">&amp;&amp;</span> make
+</span><span class='line'><span class="nb">cd</span> ../../../
+</span><span class='line'>mv plist.bundle.old plist.bundle
+</span><span class='line'>cp osx-plist/ext/plist/plist.bundle ./plist2.bundle
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>找到 TM Ctag 的安装目录，我的是： ～/Library/Application Support/Avian/Pristine Copy/Bundles/tm-ctags.tmbundle/Support/bin
+修改 tmctags.rb 和 update_ctags.rb
+分别在 <code>require ENV['TM_SUPPORT_PATH'] + '/lib/ui.rb'</code> 前增加：</p>
+
+<p><code>require ENV['TM_SUPPORT_PATH'] + '/lib/osx/plist2'</code></p>
+
+<p>这样就可以同时工作了  但是还是会有一个警告消息。</p>
+
+<p>完美的解决方案是修改 原版的 plist.bundle 或者 完善 git://github.com/kballard/osx-plist.git</p>
+
+<p>简单研究了一下 TM2的源码 目前我还不会修改 plist.bundle 所以只能使用这个临时不完美的解决方案。</p>
+
+<p>这个方案的原理是：
+先载入新版本的 plist2 ，之后原版的plist就无法加载。但是会有一个警告消息。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -178,6 +327,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/">TextMate 2 下 Ctag 和 Git Bundle 同时工作</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">Autossh+launchd 实现全自动 Ssh -D 端口转发 Socks5 代理</a>

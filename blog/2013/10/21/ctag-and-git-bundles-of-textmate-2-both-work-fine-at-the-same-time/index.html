@@ -1,24 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Lester Zhao's Blog]]></title>
-  <link href="http://lester.izstudy.com//atom.xml" rel="self"/>
-  <link href="http://lester.izstudy.com//"/>
-  <updated>2013-10-21T01:16:19+08:00</updated>
-  <id>http://lester.izstudy.com//</id>
-  <author>
-    <name><![CDATA[Lester Zhao]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>TextMate 2 下 Ctag 和 Git Bundle 同时工作 - Lester Zhao's Blog</title>
+  <meta name="author" content="Lester Zhao">
 
   
-  <entry>
-    <title type="html"><![CDATA[TextMate 2 下 Ctag 和 Git Bundle 同时工作]]></title>
-    <link href="http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/"/>
-    <updated>2013-10-21T00:20:00+08:00</updated>
-    <id>http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time</id>
-    <content type="html"><![CDATA[<p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一些折腾才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
+  <meta name="description" content="最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一些折腾才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。 问题现象：
+使用 TM2 ruby 1.9.3 ruby 2.0.1
+Git Bundle 可以正常工作。
+安装 TM Ctag &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/atom.xml" rel="alternate" title="Lester Zhao's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29729946-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Lester Zhao's Blog</a></h1>
+  
+    <h2>Writing something what I thought about and what I want to do.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/blog/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:lester.izstudy.com/" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">TextMate 2 下 Ctag 和 Git Bundle 同时工作</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-21T00:20:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一些折腾才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
 
 <p>问题现象：
 使用 TM2 ruby 1.9.3 ruby 2.0.1
@@ -130,135 +218,170 @@ Git Bundle 可以正常工作。
 
 <p>这个方案的原理是：
 先载入新版本的 plist2 ，之后原版的plist就无法加载。但是会有一个警告消息。</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[autossh+launchd 实现全自动 ssh -D 端口转发 socks5 代理]]></title>
-    <link href="http://lester.izstudy.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/"/>
-    <updated>2012-06-29T21:55:00+08:00</updated>
-    <id>http://lester.izstudy.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection</id>
-    <content type="html"><![CDATA[<p>用ssh端口转发做为代理 fan qiang 很久了，一直都是手动运行脚本的，我的MBA基本上是不关机的，重来都是用完直接扣下屏幕。
-但每次打开之后都需要重新运行一下ssh -D 脚本， 作为一个会写代码的人来说显得还是不够专业。所以我决定要充分发挥我的主观能动性， 让我的电脑更智能。 目前已经可以良好的运行了。</p>
 
-<p>废话少说我直接进入主题。</p>
+<span class="byline author vcard">Posted by <span class="fn">Lester Zhao</span></span>
 
-<p>我的系统是：Mac OS X Lion</p>
-
-<p>首先要介绍几个名词：<br/>
-<strong>ssh端口转发：</strong> 是一种利用ssh隧道链接建立的sock5代理。 <br/>
-<strong>launchd：</strong> Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
-<strong>autossh：</strong>是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
-
-<!--more-->
+      
 
 
-<p>首先需要设置使用密钥链接 ssh 主机， 这样做的目的是链接主机的时候不用输入密码的环节。<br/>
-其次你还需要 Homebrew 或者 MacPorts 用来安装 autossh。<br/>
-我是用 Homebrew 安装的，打开终端。</p>
-
-<p>执行如下命令：<br/>
-<code>brew install autossh</code><br/>
-稍等片刻很快就会完成安装。</p>
-
-<p>终端下输入：<br/>
-<code>autossh -M 8118 -nNT -D 8117 root@sshhost.com</code><br/>
-注意其中 8117是你最终的socks5端口，root是你链接ssh的账号，sshhost.com是你的ssh主机地址（也可以是ip地址）。将这些内容替换成你可以正常使用的信息。<br/>
--nNT这个几个参数最好保持，另外最好不要增加-f参数，如果增加了launchd就有可能不能进行正确管理。</p>
-
-<p>执行上面命令之后我们要达到的效果是：没有返回结果，并且命令不结束，socks5可用（可以用 SwitchySharp for Chrome测试）。<br/>
-这说明autossh ssh -D 已经没有问题。下面我们要做的就是用 launchd 来管理之。<br/>
-按 Ctrl + c 退出刚才状态。</p>
-
-<p>接下来要用你习惯的文本编辑器创建下面这个文件：<br/>
-~/Library/LaunchAgents/ssh-d.plist
-我是用 Sublime Text 2 创建的。</p>
-
-<p>文件的内容如下：</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>  <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-</span><span class='line'>  <span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;dict&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;string&gt;</span>localdomain.localhost.ssh-d<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;array&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>/usr/local/bin/autossh<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>-M<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>8118<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>-nNT<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>-D<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>8117<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>          <span class="nt">&lt;string&gt;</span>root@sshhost.com<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;/array&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>KeepAlive<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;true/&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;true/&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>StandardOutPath<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;string&gt;</span>/var/log/ssh-d-out.log<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;key&gt;</span>StandardErrorPath<span class="nt">&lt;/key&gt;</span>
-</span><span class='line'>        <span class="nt">&lt;string&gt;</span>/var/log/ssh-d-err.log<span class="nt">&lt;/string&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;/dict&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/plist&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
 
 
-<p>打开终端执行命令： <br/>
-<code>launchctl load ~/Library/LaunchAgents/ssh-d.plist</code></p>
 
-<p>然后检查 socks 代理是否可以使用。
-如果不可以使用，打开 Mac 系统的控制台程序，查看日志有无相关错误。</p>
 
-<p>到目前为止，以后我们就可以很轻松的使用代理了，而且不用操心代理是否链接的问题，系统会自动去帮你检查。</p>
 
-<p>可以使用下面命令查看你的ssh进程情况：<br/>
-<code>ps -auxww |grep 8117</code></p>
 
-<p>下面命令是用来去掉launchd进行管理的：<br/>
-<code>launchctl unload ~/Library/LaunchAgents/ssh-d.plist</code></p>
-
-<p>参考文章：<br/>
-<a href="http://dipplum.com/2010/09/12/launchd-plist-for-ssh-d/">自动连接ssh -D的launchd配置</a><br/>
-<a href="http://blog.hebine.com/archives/1621.html">Mac下开机自动连接ssh -D</a></p>
-]]></content>
-  </entry>
   
-  <entry>
-    <title type="html"><![CDATA[test the first blog post with octopress]]></title>
-    <link href="http://lester.izstudy.com//blog/2012/03/05/test-the-first-blog-post-with-octopress/"/>
-    <updated>2012-03-05T00:11:00+08:00</updated>
-    <id>http://lester.izstudy.com//blog/2012/03/05/test-the-first-blog-post-with-octopress</id>
-    <content type="html"><![CDATA[<p>Hello World！
-世界你好， 我又要重新开始写Blog了。</p>
-]]></content>
-  </entry>
+
+
+<time datetime="2013-10-21T00:20:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2013</time>
+      
+
+<span class="categories">
   
-</feed>
+    <a class='category' href='/blog/categories/textmate-2/'>TextMate 2</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/" data-via="zmbacker" data-counturl="http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/" title="Previous Post: autossh+launchd 实现全自动 ssh -D 端口转发 socks5 代理">&laquo; autossh+launchd 实现全自动 ssh -D 端口转发 socks5 代理</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/">TextMate 2 下 Ctag 和 Git Bundle 同时工作</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">Autossh+launchd 实现全自动 Ssh -D 端口转发 Socks5 代理</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/05/test-the-first-blog-post-with-octopress/">Test the First Blog Post With Octopress</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/zm.backer@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Lester Zhao -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'lesterzhaosblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/';
+        var disqus_url = 'http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
