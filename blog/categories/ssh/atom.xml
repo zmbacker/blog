@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ssh | Lester Zhao's Blog]]></title>
-  <link href="http://lester.youyou100.com//blog/categories/ssh/atom.xml" rel="self"/>
-  <link href="http://lester.youyou100.com//"/>
-  <updated>2012-07-01T13:13:42+08:00</updated>
-  <id>http://lester.youyou100.com//</id>
+  <link href="http://lester.izstudy.com//blog/categories/ssh/atom.xml" rel="self"/>
+  <link href="http://lester.izstudy.com//"/>
+  <updated>2013-10-20T23:45:12+08:00</updated>
+  <id>http://lester.izstudy.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[autossh+launchd 实现全自动 ssh -D 端口转发 socks5 代理]]></title>
-    <link href="http://lester.youyou100.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/"/>
+    <link href="http://lester.izstudy.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/"/>
     <updated>2012-06-29T21:55:00+08:00</updated>
-    <id>http://lester.youyou100.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection</id>
+    <id>http://lester.izstudy.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection</id>
     <content type="html"><![CDATA[<p>用ssh端口转发做为代理 fan qiang 很久了，一直都是手动运行脚本的，我的MBA基本上是不关机的，重来都是用完直接扣下屏幕。
 但每次打开之后都需要重新运行一下ssh -D 脚本， 作为一个会写代码的人来说显得还是不够专业。所以我决定要充分发挥我的主观能动性， 让我的电脑更智能。 目前已经可以良好的运行了。</p>
 
@@ -55,7 +55,7 @@
 我是用 Sublime Text 2 创建的。</p>
 
 <p>文件的内容如下：<br/>
-<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
