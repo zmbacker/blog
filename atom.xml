@@ -4,7 +4,7 @@
   <title><![CDATA[Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com//atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com//"/>
-  <updated>2013-10-21T01:16:19+08:00</updated>
+  <updated>2013-10-21T01:19:40+08:00</updated>
   <id>http://lester.izstudy.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -18,12 +18,15 @@
     <link href="http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/"/>
     <updated>2013-10-21T00:20:00+08:00</updated>
     <id>http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time</id>
-    <content type="html"><![CDATA[<p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一些折腾才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
+    <content type="html"><![CDATA[<p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一番周折才勉强可以同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
 
-<p>问题现象：
-使用 TM2 ruby 1.9.3 ruby 2.0.1
-Git Bundle 可以正常工作。
-安装 TM Ctag Bundle 之后 ^ + Command + P 报异常大概如下:</p>
+<p>问题现象：</p>
+
+<p>使用 TM2 ruby 1.9.3 ruby 2.0.1</p>
+
+<p>Git Bundle 可以正常工作。</p>
+
+<p>安装 TM Ctag Bundle 之后 ^ + Command + P 报异常大概如下:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
