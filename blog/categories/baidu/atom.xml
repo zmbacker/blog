@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Baidu | Lester Zhao's Blog]]></title>
+  <link href="http://lester.izstudy.com//blog/categories/baidu/atom.xml" rel="self"/>
+  <link href="http://lester.izstudy.com//"/>
+  <updated>2013-10-21T13:58:53+08:00</updated>
+  <id>http://lester.izstudy.com//</id>
+  <author>
+    <name><![CDATA[Lester Zhao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Google并不完美，Baidu也并非很烂（日语翻译服务对比）]]></title>
+    <link href="http://lester.izstudy.com//blog/2012/09/10/translat-in-google-and-baidu/"/>
+    <updated>2012-09-10T21:14:00+08:00</updated>
+    <id>http://lester.izstudy.com//blog/2012/09/10/translat-in-google-and-baidu</id>
+    <content type="html"><![CDATA[<p>不管你是一个谷歌粉也好，或者是一个只用百度而忽视谷歌存在的中国网民也好，在每个人的心里面对各自喜欢的互联网应用都有一定的偏好。 而人们往往会因为喜欢而忽视一些客观存在的问题。比如：对于谷歌粉来说，往往不容许别人说谷歌的半点不是，他会有一百个理由来解释她的问题。 我就是一个铁杆的谷歌粉，我偏爱谷歌的各种应用，我一直坚定不移的认为谷歌的旗下的各种产品均是近乎完美的。所以不管什么类型的应用只要谷歌有我就会用谷歌的，那么翻译工具这个我也是一直用谷歌的。  由于最近接触日语相关内容比较多，所以经常翻译一些日语内容。后来听说百度翻译也低调上线了，所以就尝试了一下。</p>
+
+<p>那么究竟谁家的翻译服务更好呢？并不着急下结论，请先看下面的例子吧：</p>
+
+<p><strong>案例一:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">ちょっと日本語理解できます</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">你能理解一个小日本</td>
+<td align="right">2|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">点日语可以理解。</td>
+<td align="right">7|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">可以理解一些日语。</td>
+<td align="right">|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例二:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">こんな食べ方もあるんです。季節を味わう、さんま料理</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">有什么办法吃。享受的季节，刀鱼美食</td>
+<td align="right">5|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">这样的吃法也有东西。季节品尝料理，秋刀鱼</td>
+<td align="right">6|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">也有这样的吃法。平常季节的味道 秋刀鱼料理</td>
+<td align="right">|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例三:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">沖縄県・尖閣諸島の国有化に伴い、政府は１１日、外務省の杉山晋輔アジア大洋州局長を北京に派遣するなど、対立先鋭化を避け中国側の理解を得ることに躍起になっている。だが、中国外務省は「必要な措置をとる」と明言しており、公船を尖閣付近の海域に派遣し挑発するなどの対抗措置に出るとみられる。中国公船は日本の海上保安庁の船艇数（１０００トン以上）に迫る勢いで、監視態勢には不安も残る。　「日中の外交当局で緊密な意思疎通を行ってきた」　藤村修官房長官は１１日の記者会見で、尖閣国有化が日中関係に与える影響を抑えるよう両国で調整してきたと強調した。</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">11日，冲绳县的尖阁列岛，发送到北京亚太部主任，外交信介杉山国有化，政府正在全力以赴，只是为了得到中国方面的理解，避免冲突锐化。不过，外交部表示，中国将“采取必要措施，”他来作为对策，派出向尖阁公众船附近海域的挑衅。中国公务船接近的势头，日本海上保安厅的船只在（1000吨以上）的数量，仍然的姿态监视焦虑的。3月11日在新闻发布会上，我们一直强调“通信密切的外交当局的一天，”内阁官房长官小寒藤村进行了调整，以减少在这两个国家的影响国有化尖阁列岛给日本与中国的关系。</td>
+<td align="right">4|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right"> 冲绳县・钓鱼岛的国有化的发展，政府在11日，外务省的杉山晋輔亚洲大洋州局长北京派遣等，对立避开尖锐化的中国方面的理解，拼命。但是，中国外务省“必要的措施”，明确表示着，公船在尖阁诸岛附近海域派遣挑衅等对抗措施出来的和被看的。中国公船是日本的海上保安厅巡视船数（1000吨以上）迫近的气势，监视态势是不安也残る。“日中外交当局密切沟通进行了”，藤村修官房长官在11日的记者招待会上，钓鱼岛国有化中日关系的影响控制两国调整了强调了。</td>
+<td align="right">6|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right"> 接近百度翻译 </td>
+<td align="right">|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例四:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">それではご質問がございましたら、ご連絡ください。</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">如果您有任何疑问，请与我们联系。</td>
+<td align="right">9|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">那么您的问题，请再联系。</td>
+<td align="right">5|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">如果您有任何疑问，请与我们联系。</td>
+<td align="right">|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例五:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">実施時期について満足している。</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">关于实施的时间，我很高兴。</td>
+<td align="right">9|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">实施时期表示满意的。</td>
+<td align="right">5|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">关于实施时间,我很满意.</td>
+<td align="right">|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例六:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">大連センタースタッフの皆様</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">中心的工作人员每个人都大连</td>
+<td align="right">3|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">大连中心工作人员的大家</td>
+<td align="right">6|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">大连中心的所有工作人员(邮件开头写的)</td>
+<td align="right"> |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例七:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">NHNSTオリジナル LINEスタンプ　大連センターへのプレゼントを開始!!</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">启动该中心原大连NHNST时间戳行的礼物！</td>
+<td align="right">3|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">NHNST原创LINE邮票大连中心的礼物开始！</td>
+<td align="right">4|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">NHNST原创的LINE邮票大连中心的礼物开始！</td>
+<td align="right"> |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例八:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">簡単に言いますとBOではグロバル変数を使わないでください。</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">请不要使用在简单的变量BO Gurobaru的。</td>
+<td align="right">5|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">简单地说BO上全球变量请不要使用。</td>
+<td align="right">7|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right"></td>
+<td align="right"> |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>案例九:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> 翻译工具 </th>
+<th align="right"> 文字内容 </th>
+<th align="right">得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left">日语原文</td>
+<td align="right">目標登録は必ず日本語でご記入お願いします。</td>
+<td align="right">|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">谷歌翻译</td>
+<td align="right">我们的目标是在注册时填写请日本。</td>
+<td align="right">5|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">百度翻译</td>
+<td align="right">目标登记是一定会用日语填写关照。</td>
+<td align="right">7|</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">正确译文</td>
+<td align="right">目标登记请用日语填写。</td>
+<td align="right"> |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>通过上面的对比，明眼人一看就知道谁的更好了。 谷歌中日翻译基本上属于入门级，很多翻译出来的内容会有问题。 百度相对于谷歌来说要好不少。 至少理解起来意思不会有什么偏差。</p>
+
+<p>所以这次我还是要赞一下百度的， 百度确实用心做了这个翻译服务。</p>
+
+<p>而谷歌或许是利用偏技术运算的方式进行的日语翻译，但我只能说很遗憾不太准确了。</p>
+
+<p>但谷歌翻译的语音提示做的就很贴心， 也是就贴入一段日语，谷歌下面会给你列出音标，对于我学习就有很大帮助。</p>
+
+<p>所以说谷歌也并非都做的完美， 百度也不至于很烂（百度搜索做的还真就挺烂）。</p>
+
+<p>百度的关键单词更加准确 而谷歌的语句结构好一点</p>
+
+<p>最后人生感悟： 看待事情要客观全面看待，辩证的看待，不要管中窥豹，以偏概全。</p>
+]]></content>
+  </entry>
+  
+</feed>
