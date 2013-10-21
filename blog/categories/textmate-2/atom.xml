@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TextMate 2 | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com//blog/categories/textmate-2/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com//"/>
-  <updated>2013-10-21T11:17:28+08:00</updated>
+  <updated>2013-10-21T12:38:02+08:00</updated>
   <id>http://lester.izstudy.com//</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -22,7 +22,7 @@
 
 <p>问题现象：</p>
 
-<p>使用 TM2 ruby 1.9.3 ruby 2.0.1</p>
+<p>使用 TM2、 ruby 1.9.3 或 ruby 2.0.1</p>
 
 <p>Git Bundle 可以正常工作。</p>
 
@@ -44,13 +44,13 @@
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;ui.rb:308: in `to_plist&#39;: An object in the argument tree could not be converted (ArgumentError)</span>
-</span><span class='line'><span class="sr">    from /</span><span class="no">Users</span><span class="o">/</span><span class="n">backer</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">308</span><span class="ss">:in</span> <span class="sb">`block in initialize&#39;</span>
-</span><span class='line'><span class="sb">    from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `</span><span class="n">popen</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">    from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `initialize&#39;</span>
-</span><span class='line'>    <span class="n">from</span> <span class="sr">/Users/</span><span class="n">backer</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">20</span><span class="ss">:in</span> <span class="sb">`new&#39;</span>
-</span><span class='line'><span class="sb">    from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `</span><span class="n">dialog</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">    from /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/progress.rb:42:in `call_with_progress&#39;</span>
-</span><span class='line'>    <span class="n">from</span> <span class="sr">/Users/</span><span class="n">backer</span><span class="o">/</span><span class="n">_test_tm</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">12</span><span class="ss">:in</span> <span class="sb">`&amp;lt;main&amp;gt;&#39;</span>
+</span><span class='line'><span class="sr">    from ～/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">308</span><span class="ss">:in</span> <span class="sb">`block in initialize&#39;</span>
+</span><span class='line'><span class="sb">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `</span><span class="n">popen</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `initialize&#39;</span>
+</span><span class='line'>    <span class="n">from</span> <span class="err">～</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">20</span><span class="ss">:in</span> <span class="sb">`new&#39;</span>
+</span><span class='line'><span class="sb">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `</span><span class="n">dialog</span><span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/progress.rb:42:in `call_with_progress&#39;</span>
+</span><span class='line'>    <span class="n">from</span> <span class="err">～</span><span class="o">/</span><span class="n">_test_tm</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">12</span><span class="ss">:in</span> <span class="sb">`&amp;lt;main&amp;gt;&#39;</span>
 </span><span class='line'><span class="sb">&lt;/code&gt;&lt;/pre&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sb">&lt;p&gt;</span>
@@ -81,8 +81,8 @@
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>dyld: lazy symbol binding failed: Symbol not found: &lt;em&gt;rb_intern2 Referenced from: /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
-</span><span class='line'>dyld: Symbol not found: &lt;/em&gt;rb_intern2 Referenced from: /Users/backer/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>dyld: lazy symbol binding failed: Symbol not found: &lt;em&gt;rb_intern2 Referenced from: ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
+</span><span class='line'>dyld: Symbol not found: &lt;/em&gt;rb_intern2 Referenced from: ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>我的一个临时解决方案是：</p>
