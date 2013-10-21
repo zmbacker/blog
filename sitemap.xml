@@ -2,48 +2,48 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://lester.izstudy.com//blog/2012/03/05/test-the-first-blog-post-with-octopress/
+            http://lester.izstudy.com/blog/2012/03/05/test-the-first-blog-post-with-octopress/
         </loc>
         <lastmod>2013-10-21T11:14:59+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lester.izstudy.com//blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/
+            http://lester.izstudy.com/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/
         </loc>
         <lastmod>2013-10-21T11:14:59+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//blog/2012/09/10/translat-in-google-and-baidu/</loc>
+        <loc>http://lester.izstudy.com/blog/2012/09/10/translat-in-google-and-baidu/</loc>
         <lastmod>2013-10-21T14:40:45+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/
+            http://lester.izstudy.com/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/
         </loc>
         <lastmod>2013-10-21T12:33:01+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//archives/</loc>
+        <loc>http://lester.izstudy.com/archives/</loc>
         <lastmod>2013-10-21T14:40:45+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//blog/archives/</loc>
+        <loc>http://lester.izstudy.com/blog/archives/</loc>
         <lastmod>2013-10-21T14:40:45+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//blog/categories/</loc>
+        <loc>http://lester.izstudy.com/blog/categories/</loc>
         <lastmod>2013-10-21T11:14:59+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//</loc>
+        <loc>http://lester.izstudy.com/</loc>
         <lastmod>2013-10-21T14:40:45+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//robots.txt</loc>
+        <loc>http://lester.izstudy.com/robots.txt</loc>
         <lastmod>2013-10-20T23:46:13+08:00</lastmod>
     </url>
     <url>
-        <loc>http://lester.izstudy.com//test/page.html</loc>
+        <loc>http://lester.izstudy.com/test/page.html</loc>
         <lastmod>2013-10-21T11:14:59+08:00</lastmod>
     </url>
 </urlset>

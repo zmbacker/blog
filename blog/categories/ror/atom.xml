@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ROR | Lester Zhao's Blog]]></title>
-  <link href="http://lester.izstudy.com//blog/categories/ror/atom.xml" rel="self"/>
-  <link href="http://lester.izstudy.com//"/>
-  <updated>2013-10-21T20:59:35+08:00</updated>
-  <id>http://lester.izstudy.com//</id>
+  <link href="http://lester.izstudy.com/blog/categories/ror/atom.xml" rel="self"/>
+  <link href="http://lester.izstudy.com/"/>
+  <updated>2013-10-21T21:09:32+08:00</updated>
+  <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[test the first blog post with octopress]]></title>
-    <link href="http://lester.izstudy.com//blog/2012/03/05/test-the-first-blog-post-with-octopress/"/>
+    <link href="http://lester.izstudy.com/blog/2012/03/05/test-the-first-blog-post-with-octopress/"/>
     <updated>2012-03-05T00:11:00+08:00</updated>
-    <id>http://lester.izstudy.com//blog/2012/03/05/test-the-first-blog-post-with-octopress</id>
+    <id>http://lester.izstudy.com/blog/2012/03/05/test-the-first-blog-post-with-octopress</id>
     <content type="html"><![CDATA[<p>Hello World！
 世界你好， 我又要重新开始写Blog了。</p>
 ]]></content>

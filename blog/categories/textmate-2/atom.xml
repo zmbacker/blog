@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: TextMate 2 | Lester Zhao's Blog]]></title>
-  <link href="http://lester.izstudy.com//blog/categories/textmate-2/atom.xml" rel="self"/>
-  <link href="http://lester.izstudy.com//"/>
-  <updated>2013-10-21T20:59:35+08:00</updated>
-  <id>http://lester.izstudy.com//</id>
+  <link href="http://lester.izstudy.com/blog/categories/textmate-2/atom.xml" rel="self"/>
+  <link href="http://lester.izstudy.com/"/>
+  <updated>2013-10-21T21:09:32+08:00</updated>
+  <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[TextMate 2 下 Ctag 和 Git Bundle 同时工作]]></title>
-    <link href="http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/"/>
+    <link href="http://lester.izstudy.com/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/"/>
     <updated>2013-10-21T00:20:00+08:00</updated>
-    <id>http://lester.izstudy.com//blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time</id>
+    <id>http://lester.izstudy.com/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time</id>
     <content type="html"><![CDATA[<p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一番周折才勉强可以让这两个 Bundle 同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
 
 <p>问题现象：</p>
