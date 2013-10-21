@@ -4,7 +4,7 @@
   <title><![CDATA[Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2013-10-21T21:09:32+08:00</updated>
+  <updated>2013-10-21T21:12:26+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -49,6 +49,9 @@
 
 <p>其中关键是: ui.rb:308: in `to_plist&#8217;: An object in the argument tree could not be converted
 如果你的异常是这个那么可以肯定的时候和我的情况一直。下面是我的一个临时解决方案。</p>
+
+<!--more-->
+
 
 <p>这个 bug 的解决有争议，TextMate 社区认为是 Ruby 的 bug，但网络上另一个解决方案认为是 TextMate 的 bug。</p>
 
@@ -178,6 +181,9 @@
 </tr>
 </tbody>
 </table>
+
+
+<!--more-->
 
 
 <p><strong>案例二:</strong></p>
