@@ -4,7 +4,7 @@
   <title><![CDATA[Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-11T14:31:03+08:00</updated>
+  <updated>2014-01-11T14:57:08+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[simple_form datetime field with wrong time zone]]></title>
+    <link href="http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-with-wrong-time-zone/"/>
+    <updated>2014-01-11T14:32:00+08:00</updated>
+    <id>http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-with-wrong-time-zone</id>
+    <content type="html"><![CDATA[<p>simple_form 能够简化我们 rails 中创建表单的工作。 他还提供了高级功能让我们自定义表单的所有内容。</p>
+
+<h2>问题产生</h2>
+
+<p>当我们使用 simple_form 建立时间字段的时候，例如：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sx">%= simple_form_for(@user, html: { class: &#39;form-horizontal&#39; }) do |f| %&gt;</span>
+</span><span class='line'><span class="sx">  &lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:created_at</span> <span class="sx">%&gt;</span>
+</span><span class='line'><span class="sx">  &lt;div class=&quot;form-actions&quot;&gt;</span>
+</span><span class='line'>    <span class="o">&lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">button</span> <span class="ss">:submit</span> <span class="sx">%&gt;</span>
+</span><span class='line'><span class="sx">  &lt;/div&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>默认的情况下 created_at 再表单中的时间是没有问题的。</p>
+
+<p>但是当我们不满足于默认时间字段的多个 select html控件来选择时间， 而使用 DateTime Picker 更友好的方式设置时间的时候，我们需要这样做：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sx">%= simple_form_for(@user, html: { class: &#39;form-horizontal&#39; }) do |f| %&gt;</span>
+</span><span class='line'><span class="sx">  &lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:created_at</span><span class="p">,</span> <span class="ss">as</span><span class="p">:</span> <span class="ss">:string</span><span class="p">,</span> <span class="n">input_html</span><span class="p">:</span> <span class="p">{</span><span class="ss">class</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">}</span><span class="sx">%&gt;</span>
+</span><span class='line'><span class="sx">&lt;% end %&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后用 js 去生成时间日期选择。</p>
+
+<p>这个时候会发现 created_at表单中的时间不是正确的。原因是Rails从数据库中读取时间字段后没有经过时区转换就被 simple_form 使用了</p>
+
+<p>有关 <a href="http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/">Rails中如何正确使用时间</a> 请点击查看。</p>
+
+<h2>解决方法</h2>
+
+<h3>最简单的解决办法是：</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sx">%= simple_form_for(@user, html: { class: &#39;form-horizontal&#39; }) do |f| %&gt;</span>
+</span><span class='line'><span class="sx">  &lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:created_at</span><span class="p">,</span> <span class="ss">as</span><span class="p">:</span> <span class="ss">:string</span><span class="p">,</span> <span class="n">input_html</span><span class="p">:</span> <span class="p">{</span> <span class="ss">class</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="ss">value</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">created_at</span> <span class="p">}</span><span class="sx">%&gt;</span>
+</span><span class='line'><span class="sx">&lt;% end %&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>更好的解决办法：</h3>
+
+<p>如果程序中有很多这样的地方需要处理的话，每个去修改不是最明智的选择。 最好是利用 simple_form 重新定义 datetime 表单内容。</p>
+
+<p>创建文件 app/inputs/date_time_input.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">DateTimeInput</span> <span class="o">&lt;</span> <span class="ss">SimpleForm</span><span class="p">:</span><span class="ss">:Inputs</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">input</span><span class="p">()</span>
+</span><span class='line'>    <span class="vi">@builder</span><span class="o">.</span><span class="n">text_field</span><span class="p">(</span><span class="n">attribute_name</span><span class="p">,</span> <span class="n">input_html_options</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span> <span class="p">{</span> <span class="ss">class</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="ss">value</span><span class="p">:</span> <span class="n">object</span><span class="o">.</span><span class="n">send</span><span class="p">(</span> <span class="n">attribute_name</span> <span class="p">)</span> <span class="p">}</span> <span class="p">))</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>重新启动程序， 所有Datetime类型的字段都会自动生成这种时间选择表单， 并且时间是正确的了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails 的时区正确使用方法]]></title>
