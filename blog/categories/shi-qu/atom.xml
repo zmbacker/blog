@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 时区 | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/shi-qu/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-11T14:26:05+08:00</updated>
+  <updated>2014-01-11T14:31:03+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -64,8 +64,15 @@
 <p>  代表数据库中时区也用第一套， 一般情况下我们可以不做这个设置（即不添加这行到 application.rb 中）。
   如果我们的应用是考虑到国际化的话也不应该指定这个配置。</p>
 
-<p>这两套时区之间Rails为我们做了自动转换。 rails 在将时间类型的数据存入数据库的时候会自动把时间转换成 UTC 时间， 表现的现象是: 你再表单里面填写的时间要比在数据库中直接看到的时间多8个小时。
-当我们的程序从数据库读取出时间字段的时候 Rails也会自动的将时区转换为应用程序的时区。</p>
+<p>这两套时区之间Rails为我们做了自动转换。</p>
+
+<h4>读取</h4>
+
+<p>rails 在将时间类型的数据存入数据库的时候会自动把时间转换成 UTC 时间， 表现的现象是: 你在表单里面填写的时间要比在数据库中直接看到的时间多8个小时。</p>
+
+<h4>存入</h4>
+
+<p>当我们的程序从数据库读取出时间字段的时候 Rails也会自动的将时区转换为应用程序的时区。</p>
 
 <p>这个逻辑理解了之后，我们可以很容易控制时间的比对等问题了。</p>
 
@@ -103,6 +110,8 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>当你想直接把时间带入sql语句比对时间的时候一定不要忘了做这个转换，否则您的时间比对就不正确了。</p>
+
+<p>时区时间问题也就差不多了。了解了就不难。</p>
 ]]></content>
   </entry>
   
