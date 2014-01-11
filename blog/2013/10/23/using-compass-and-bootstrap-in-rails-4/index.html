@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Categories - Lester Zhao's Blog</title>
+  <title>在 Rails 4 中使用 Compass 和 Bootstrap - Lester Zhao's Blog</title>
   <meta name="author" content="Lester Zhao">
 
   
-  <meta name="description" content="Categories Jul 28th, 2013 Ror [ 1 ] Test [ 1 ] Mac os x lion [ 1 ] Autossh [ 1 ] Launchd [ 1 ] Socks5 [ 1 ] Ssh [ 1 ] Baidu [ 1 ] Google [ 1 ] &hellip;">
+  <meta name="description" content="Compass Bootstrap 错误 File to import not found or unreadable: susy (again!) No application integration exists for rails 首先 gem &lsquo;bootstrap-sass& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lester.izstudy.com/blog/categories/">
+  <link rel="canonical" href="http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -74,69 +74,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Categories</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-28T23:11:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2013</time></p>
-  </header>
-  
-  <ul>
-
-    <li><a href="/blog/categories/ROR/">Ror</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/TEST/">Test</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Mac OS X lion/">Mac os x lion</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/autossh/">Autossh</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/launchd/">Launchd</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/socks5/">Socks5</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/ssh/">Ssh</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Baidu/">Baidu</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Google/">Google</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Translate/">Translate</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/TextMate 2/">Textmate 2</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Bootstrap/">Bootstrap</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Compass/">Compass</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Rails/">Rails</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/Timezone/">Timezone</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/时区/">时区</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/时间比对/">时间比对</a> [ 1 ]</li>
-
-</ul>
-
-
-  
-    <footer>
+    
+      <h1 class="entry-title">在 Rails 4 中使用 Compass 和 Bootstrap</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -148,12 +94,103 @@
   
 
 
-<time datetime="2013-07-28T23:11:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2013</time>
+<time datetime="2013-10-23T20:17:00+08:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2013</time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://compass-style.org">Compass</a></p>
+
+<p><a href="http://getbootstrap.com">Bootstrap</a></p>
+
+<p>错误</p>
+
+<p>File to import not found or unreadable: susy (again!)</p>
+
+<p>No application integration exists for rails</p>
+
+<p>首先</p>
+
+<p>gem &lsquo;bootstrap-sass&rsquo;</p>
+
+<p>group :assets do
+  gem &lsquo;compass-rails&rsquo;
+  gem &ldquo;susy&rdquo;
+end</p>
+
+<p>cd /to/project/path/
+bundle
+bundle exec compass init rails ./
+bundle exec compass install susy</p>
+
+<p>之后修改</p>
+
+<p>gem &lsquo;compass&rsquo;
+gem &lsquo;compass-rails&rsquo;
+gem &lsquo;compass-rails&rsquo;, github: &ldquo;Compass/compass-rails&rdquo;, branch: &ldquo;rails4-hack&rdquo;
+gem &ldquo;susy&rdquo;
+gem &lsquo;bootstrap-sass&rsquo;</p>
+
+<p>group :assets do
+end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-    </footer>
   
+
+<span class="byline author vcard">Posted by <span class="fn">Lester Zhao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-23T20:17:00+08:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bootstrap/'>Bootstrap</a>, <a class='category' href='/blog/categories/compass/'>Compass</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/" data-via="zmbacker" data-counturl="http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/" title="Previous Post: TextMate 2 下 Ctag 和 Git Bundle 同时工作">&laquo; TextMate 2 下 Ctag 和 Git Bundle 同时工作</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/" title="Next Post: Deploy Rails 4.x use Capistrano 3.x">Deploy Rails 4.x use Capistrano 3.x &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
   <section>
@@ -235,8 +272,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lester.izstudy.com/blog/categories/index.html';
-        var disqus_url = 'http://lester.izstudy.com/blog/categories/index.html';
+        var disqus_identifier = 'http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/';
+        var disqus_url = 'http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/';
         var disqus_script = 'embed.js';
       
     (function () {

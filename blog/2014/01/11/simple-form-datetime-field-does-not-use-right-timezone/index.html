@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Lester Zhao's Blog</title>
+  <title>Rails 的时区正确使用方法 - Lester Zhao's Blog</title>
   <meta name="author" content="Lester Zhao">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lester.izstudy.com/">
+  <link rel="canonical" href="http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -73,15 +73,12 @@
 </nav> -->
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/">Rails 的时区正确使用方法</a></h1>
+      <h1 class="entry-title">Rails 的时区正确使用方法</h1>
     
     
       <p class="meta">
@@ -104,7 +101,7 @@
   </header>
 
 
-  <div class="entry-content"><p>如果你使用 Rails 开发应用，你一定遇到过时间显示不正确的问题，也就是时区问题。 下面我简单说明一下如何在 Rails 中正确使用时间、时区问题。</p>
+<div class="entry-content"><p>如果你使用 Rails 开发应用，你一定遇到过时间显示不正确的问题，也就是时区问题。 下面我简单说明一下如何在 Rails 中正确使用时间、时区问题。</p>
 
 <h2>原理简介</h2>
 
@@ -183,75 +180,16 @@
 
 <p>当你想直接把时间带入sql语句比对时间的时候一定不要忘了做这个转换，否则您的时间比对就不正确了。</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/">Deploy Rails 4.x Use Capistrano 3.x</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Lester Zhao</span></span>
 
-<time datetime="2013-11-02T01:12:00+08:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>PATH add to
-~/.bashrc</p>
-
-<p>set :bundle_flags, &lsquo;&mdash;quiet&rsquo;</p>
-
-<p>DEBUG [ec59288d]        The &mdash;deployment flag requires a Gemfile.lock. Please make sure you have checked
-DEBUG [ec59288d]        your Gemfile.lock into version control before deploying.</p>
-
-<p>need Gemfile.lock
-capistrano   your Gemfile.lock into version control before deploying.</p>
-
-<p> INFO [76a73a08] Running /usr/bin/env rake assets:precompile on izstudy.com
-DEBUG [76a73a08] Command: cd /var/www/izmeeting/releases/20131102010425 &amp;&amp; ( RAILS_ENV= /usr/bin/env rake assets:precompile )
-DEBUG [76a73a08]        rake aborted!
-DEBUG [76a73a08]        database configuration does not specify adapter</p>
-
-<p>bundle config &mdash;delete bin
-bundle config &mdash;delete bin    # Turn off Bundler&rsquo;s stub generator</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/">在 Rails 4 中使用 Compass 和 Bootstrap</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -263,297 +201,48 @@ bundle config &mdash;delete bin    # Turn off Bundler&rsquo;s stub generator</p>
   
 
 
-<time datetime="2013-10-23T20:17:00+08:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://compass-style.org">Compass</a></p>
-
-<p><a href="http://getbootstrap.com">Bootstrap</a></p>
-
-<p>错误</p>
-
-<p>File to import not found or unreadable: susy (again!)</p>
-
-<p>No application integration exists for rails</p>
-
-<p>首先</p>
-
-<p>gem &lsquo;bootstrap-sass&rsquo;</p>
-
-<p>group :assets do
-  gem &lsquo;compass-rails&rsquo;
-  gem &ldquo;susy&rdquo;
-end</p>
-
-<p>cd /to/project/path/
-bundle
-bundle exec compass init rails ./
-bundle exec compass install susy</p>
-
-<p>之后修改</p>
-
-<p>gem &lsquo;compass&rsquo;
-gem &lsquo;compass-rails&rsquo;
-gem &lsquo;compass-rails&rsquo;, github: &ldquo;Compass/compass-rails&rdquo;, branch: &ldquo;rails4-hack&rdquo;
-gem &ldquo;susy&rdquo;
-gem &lsquo;bootstrap-sass&rsquo;</p>
-
-<p>group :assets do
-end</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2014-01-11T13:39:00+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/">TextMate 2 下 Ctag 和 Git Bundle 同时工作</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/timezone/'>Timezone</a>, <a class='category' href='/blog/categories/shi-qu/'>时区</a>, <a class='category' href='/blog/categories/shi-jian-bi-dui/'>时间比对</a>
+  
+</span>
 
 
-<time datetime="2013-10-21T00:20:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2013</time>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>最近再使用 TextMate 2 的 Bundle：Ctag 和 Git 的时候经过了一番周折才勉强可以让这两个 Bundle 同时工作。写出来帮助遇到同样问题的朋友。避免浪费时间。</p>
-
-<p>问题现象：</p>
-
-<p>使用 TM2、 ruby 1.9.3 或 ruby 2.0.1</p>
-
-<p>Git Bundle 可以正常工作。</p>
-
-<p>安装 TM Ctag Bundle 之后 ^ + Command + P 报异常大概如下:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">308</span><span class="p">:</span> <span class="k">in</span> <span class="sb">`to_plist&#39;: An object in the argument tree could not be converted (ArgumentError)</span>
-</span><span class='line'><span class="sb">     from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:308:in `</span><span class="n">block</span> <span class="k">in</span> <span class="kp">initialize</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">     from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `popen&#39;</span>
-</span><span class='line'>      <span class="n">from</span> <span class="err">～</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">307</span><span class="ss">:in</span> <span class="sb">`initialize&#39;</span>
-</span><span class='line'><span class="sb">     from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `</span><span class="kp">new</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">     from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `dialog&#39;</span>
-</span><span class='line'>      <span class="n">from</span> <span class="err">～</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">progress</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">42</span><span class="ss">:in</span> <span class="sb">`call_with_progress&#39;</span>
-</span><span class='line'><span class="sb">     from ～/_test_tm.rb:12:in `</span><span class="o">&lt;</span><span class="n">main</span><span class="o">&gt;</span><span class="err">&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>其中关键是: ui.rb:308: in `to_plist&#8217;: An object in the argument tree could not be converted
-如果你的异常是这个那么可以肯定的时候和我的情况一直。下面是我的一个临时解决方案。</p>
-
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/" data-via="zmbacker" data-counturl="http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/10/21/ctag-and-git-bundles-of-textmate-2-both-work-fine-at-the-same-time/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/10/translat-in-google-and-baidu/">Google并不完美，Baidu也并非很烂（日语翻译服务对比）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-10T21:14:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>不管你是一个谷歌粉也好，或者是一个只用百度而忽视谷歌存在的中国网民也好，在每个人的心里面对各自喜欢的互联网应用都有一定的偏好。 而人们往往会因为喜欢而忽视一些客观存在的问题。比如：对于谷歌粉来说，往往不容许别人说谷歌的半点不是，他会有一百个理由来解释她的问题。 我就是一个铁杆的谷歌粉，我偏爱谷歌的各种应用，我一直坚定不移的认为谷歌的旗下的各种产品均是近乎完美的。所以不管什么类型的应用只要谷歌有我就会用谷歌的，那么翻译工具这个我也是一直用谷歌的。  由于最近接触日语相关内容比较多，所以经常翻译一些日语内容。后来听说百度翻译也低调上线了，所以就尝试了一下。</p>
-
-<p>那么究竟谁家的翻译服务更好呢？并不着急下结论，请先看下面的例子吧：</p>
-
-<p><strong>案例一:</strong></p>
-
-<table>
-<thead>
-<tr>
-<th align="left"> 翻译工具 </th>
-<th align="right"> 文字内容 </th>
-<th align="right">得分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">日语原文</td>
-<td align="right">ちょっと日本語理解できます</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">谷歌翻译</td>
-<td align="right">你能理解一个小日本</td>
-<td align="right"> 2</td>
-</tr>
-<tr>
-<td align="left">百度翻译</td>
-<td align="right">点日语可以理解。</td>
-<td align="right"> 7</td>
-</tr>
-<tr>
-<td align="left">正确译文</td>
-<td align="right">可以理解一些日语。</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/09/10/translat-in-google-and-baidu/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
+        <a class="basic-alignment left" href="/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/" title="Previous Post: Deploy Rails 4.x use Capistrano 3.x">&laquo; Deploy Rails 4.x use Capistrano 3.x</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">Autossh+launchd 实现全自动 Ssh -D 端口转发 Socks5 代理</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-29T21:55:00+08:00" pubdate data-updated="true">Jun 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>用ssh端口转发做为代理 fan qiang 很久了，一直都是手动运行脚本的，我的MBA基本上是不关机的，重来都是用完直接扣下屏幕。
-但每次打开之后都需要重新运行一下ssh -D 脚本， 作为一个会写代码的人来说显得还是不够专业。所以我决定要充分发挥我的主观能动性， 让我的电脑更智能。 目前已经可以良好的运行了。</p>
-
-<p>废话少说我直接进入主题。</p>
-
-<p>我的系统是：Mac OS X Lion</p>
-
-<p>首先要介绍几个名词：<br/>
-<strong>ssh端口转发：</strong> 是一种利用ssh隧道链接建立的sock5代理。 <br/>
-<strong>launchd：</strong> Mac OS X 系统下的用来管理整个系统的 services 和 processes 的工具。如果你需要一个程序开机自动运行，或者由于错误停止后自动重新运行，那么就可以用 launchd 来管理。 <br/>
-<strong>autossh：</strong>是用来保持 ssh 一直处于链接状态的工具。可以在链接断开后自动重新链接。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/06/29/autossh-launchd-ssh-sock5-proxy-auto-reconection/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/05/test-the-first-blog-post-with-octopress/">Test the First Blog Post With Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-05T00:11:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello World！
-世界你好， 我又要重新开始写Blog了。</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  
-  
+  </section>
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -609,6 +298,7 @@ end</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -623,7 +313,10 @@ end</p>
       var disqus_shortname = 'lesterzhaosblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/';
+        var disqus_url = 'http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

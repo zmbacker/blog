@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Categories - Lester Zhao's Blog</title>
+  <title>Deploy Rails 4.x use Capistrano 3.x - Lester Zhao's Blog</title>
   <meta name="author" content="Lester Zhao">
 
   
-  <meta name="description" content="Categories Jul 28th, 2013 Ror [ 1 ] Test [ 1 ] Mac os x lion [ 1 ] Autossh [ 1 ] Launchd [ 1 ] Socks5 [ 1 ] Ssh [ 1 ] Baidu [ 1 ] Google [ 1 ] &hellip;">
+  <meta name="description" content="PATH add to
+~/.bashrc set :bundle_flags, &lsquo;&mdash;quiet&rsquo; DEBUG [ec59288d] The &mdash;deployment flag requires a Gemfile.lock. Please make &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lester.izstudy.com/blog/categories/">
+  <link rel="canonical" href="http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -74,69 +75,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Categories</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-28T23:11:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2013</time></p>
-  </header>
-  
-  <ul>
-
-    <li><a href="/blog/categories/ROR/">Ror</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/TEST/">Test</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Mac OS X lion/">Mac os x lion</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/autossh/">Autossh</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/launchd/">Launchd</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/socks5/">Socks5</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/ssh/">Ssh</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Baidu/">Baidu</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Google/">Google</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Translate/">Translate</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/TextMate 2/">Textmate 2</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Bootstrap/">Bootstrap</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Compass/">Compass</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/Rails/">Rails</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/Timezone/">Timezone</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/时区/">时区</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/时间比对/">时间比对</a> [ 1 ]</li>
-
-</ul>
-
-
-  
-    <footer>
+    
+      <h1 class="entry-title">Deploy Rails 4.x Use Capistrano 3.x</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -148,12 +95,81 @@
   
 
 
-<time datetime="2013-07-28T23:11:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2013</time>
+<time datetime="2013-11-02T01:12:00+08:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>PATH add to
+~/.bashrc</p>
+
+<p>set :bundle_flags, &lsquo;&mdash;quiet&rsquo;</p>
+
+<p>DEBUG [ec59288d]        The &mdash;deployment flag requires a Gemfile.lock. Please make sure you have checked
+DEBUG [ec59288d]        your Gemfile.lock into version control before deploying.</p>
+
+<p>need Gemfile.lock
+capistrano   your Gemfile.lock into version control before deploying.</p>
+
+<p> INFO [76a73a08] Running /usr/bin/env rake assets:precompile on izstudy.com
+DEBUG [76a73a08] Command: cd /var/www/izmeeting/releases/20131102010425 &amp;&amp; ( RAILS_ENV= /usr/bin/env rake assets:precompile )
+DEBUG [76a73a08]        rake aborted!
+DEBUG [76a73a08]        database configuration does not specify adapter</p>
+
+<p>bundle config &mdash;delete bin
+bundle config &mdash;delete bin    # Turn off Bundler&rsquo;s stub generator</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-    </footer>
   
+
+<span class="byline author vcard">Posted by <span class="fn">Lester Zhao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-02T01:12:00+08:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/" data-via="zmbacker" data-counturl="http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/" title="Previous Post: 在 Rails 4 中使用 Compass 和 Bootstrap">&laquo; 在 Rails 4 中使用 Compass 和 Bootstrap</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/01/11/simple-form-datetime-field-does-not-use-right-timezone/" title="Next Post: Rails 的时区正确使用方法">Rails 的时区正确使用方法 &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
   <section>
@@ -235,8 +251,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lester.izstudy.com/blog/categories/index.html';
-        var disqus_url = 'http://lester.izstudy.com/blog/categories/index.html';
+        var disqus_identifier = 'http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/';
+        var disqus_url = 'http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/';
         var disqus_script = 'embed.js';
       
     (function () {

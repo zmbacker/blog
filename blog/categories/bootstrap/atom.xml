@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Bootstrap | Lester Zhao's Blog]]></title>
+  <link href="http://lester.izstudy.com/blog/categories/bootstrap/atom.xml" rel="self"/>
+  <link href="http://lester.izstudy.com/"/>
+  <updated>2014-01-11T14:26:05+08:00</updated>
+  <id>http://lester.izstudy.com/</id>
+  <author>
+    <name><![CDATA[Lester Zhao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Rails 4 中使用 Compass 和 Bootstrap]]></title>
+    <link href="http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/"/>
+    <updated>2013-10-23T20:17:00+08:00</updated>
+    <id>http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4</id>
+    <content type="html"><![CDATA[<p><a href="http://compass-style.org">Compass</a></p>
+
+<p><a href="http://getbootstrap.com">Bootstrap</a></p>
+
+<p>错误</p>
+
+<p>File to import not found or unreadable: susy (again!)</p>
+
+<p>No application integration exists for rails</p>
+
+<p>首先</p>
+
+<p>gem &lsquo;bootstrap-sass&rsquo;</p>
+
+<p>group :assets do
+  gem &lsquo;compass-rails&rsquo;
+  gem &ldquo;susy&rdquo;
+end</p>
+
+<p>cd /to/project/path/
+bundle
+bundle exec compass init rails ./
+bundle exec compass install susy</p>
+
+<p>之后修改</p>
+
+<p>gem &lsquo;compass&rsquo;
+gem &lsquo;compass-rails&rsquo;
+gem &lsquo;compass-rails&rsquo;, github: &ldquo;Compass/compass-rails&rdquo;, branch: &ldquo;rails4-hack&rdquo;
+gem &ldquo;susy&rdquo;
+gem &lsquo;bootstrap-sass&rsquo;</p>
+
+<p>group :assets do
+end</p>
+]]></content>
+  </entry>
+  
+</feed>
