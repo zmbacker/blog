@@ -4,7 +4,7 @@
   <title><![CDATA[Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-11T14:57:08+08:00</updated>
+  <updated>2014-01-11T14:59:04+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[simple_form datetime field with wrong time zone]]></title>
+    <title type="html"><![CDATA[simple_form datetime 字段 显示的时间不正确]]></title>
     <link href="http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-with-wrong-time-zone/"/>
     <updated>2014-01-11T14:32:00+08:00</updated>
     <id>http://lester.izstudy.com/blog/2014/01/11/simple-form-datetime-field-with-wrong-time-zone</id>
