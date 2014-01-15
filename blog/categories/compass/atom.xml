@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Compass | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/compass/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T17:10:33+08:00</updated>
+  <updated>2014-01-15T17:18:46+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -18,7 +18,9 @@
     <link href="http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/"/>
     <updated>2013-10-23T20:17:00+08:00</updated>
     <id>http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4</id>
-    <content type="html"><![CDATA[<p><a href="http://compass-style.org">Compass</a></p>
+    <content type="html"><![CDATA[<p><blockquote><p>这篇文章内容已经过期  Compass_rails 的新版本已经可以支持 Rails 4.<br/>目前用最新的 compass_rails 正常方法使用已经没有问题。</p></blockquote></p>
+
+<p><a href="http://compass-style.org">Compass</a></p>
 
 <p><a href="http://getbootstrap.com">Bootstrap</a></p>
 
