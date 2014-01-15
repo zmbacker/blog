@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DateTime | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/datetime/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T00:06:32+08:00</updated>
+  <updated>2014-01-15T17:07:31+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -24,37 +24,27 @@
 
 <p>当我们使用 simple_form 建立时间字段的时候，例如：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="sx">%= simple_form_for(@user, html: { class: &amp;lsquo;form-horizontal&amp;rsquo; }) do |f| %&gt;</span>
-</span><span class='line'><span class="sx">  &amp;lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:created_at</span> <span class="sx">%&gt;</span>
-</span><span class='line'><span class="sx">  &lt;div class=&quot;form-actions&quot;&gt;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;&amp;lt;%= f.button :submit %&amp;gt;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">%</span> <span class="k">end</span> <span class="o">%&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+&lt;%= simple_form_for(@user, html: { class: &lsquo;form-horizontal&rsquo; }) do |f| %>
+  &lt;%= f.input :created_at %>
+  <div class="form-actions"></p>
+
+<pre><code>&lt;%= f.button :submit %&gt;
+</code></pre>
+
+<p>  </div>
+&lt;% end %>
+{% endcodeblock %}</p>
 
 <p>默认的情况下 created_at 再表单中的时间是没有问题的。</p>
 
 <p>但是当我们不满足于默认时间字段的多个 select html控件来选择时间， 而使用 DateTime Picker 更友好的方式设置时间的时候，我们需要这样做：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="sx">%= simple_form_for(@user, html: { class: &amp;lsquo;form-horizontal&amp;rsquo; }) do |f| %&gt;</span>
-</span><span class='line'><span class="sx">  &amp;lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:created_at</span><span class="p">,</span> <span class="ss">as</span><span class="p">:</span> <span class="ss">:string</span><span class="p">,</span> <span class="n">input_html</span><span class="p">:</span> <span class="p">{</span><span class="ss">class</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">datetime</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;}</span><span class="sx">%&gt;</span>
-</span><span class='line'><span class="sx">&amp;lt;% end %&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+&lt;%= simple_form_for(@user, html: { class: &lsquo;form-horizontal&rsquo; }) do |f| %>
+  &lt;%= f.input :created_at, as: :string, input_html: {class: &lsquo;datetime&rsquo;}%>
+&lt;% end %>
+{% endcodeblock %}</p>
 
 <p>然后用 js 去生成时间日期选择。</p>
 
@@ -66,36 +56,27 @@
 
 <h3>最简单的解决办法是：</h3>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="sx">%= simple_form_for(@user, html: { class: &amp;lsquo;form-horizontal&amp;rsquo; }) do |f| %&gt;</span>
-</span><span class='line'><span class="sx">  &amp;lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:created_at</span><span class="p">,</span> <span class="ss">as</span><span class="p">:</span> <span class="ss">:string</span><span class="p">,</span> <span class="n">input_html</span><span class="p">:</span> <span class="p">{</span> <span class="ss">class</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">datetime</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="ss">value</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">object</span><span class="o">.</span><span class="n">created_at</span> <span class="p">}</span><span class="sx">%&gt;</span>
-</span><span class='line'><span class="sx">&amp;lt;% end %&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+&lt;%= simple_form_for(@user, html: { class: &lsquo;form-horizontal&rsquo; }) do |f| %>
+  &lt;%= f.input :created_at, as: :string, input_html: { class: &lsquo;datetime&rsquo;, value: f.object.created_at }%>
+&lt;% end %>
+{% endcodeblock %}</p>
 
 <h3>更好的解决办法：</h3>
 
 <p>如果程序中有很多这样的地方需要处理的话，每个去修改不是最明智的选择。 最好是利用 simple_form 重新定义 datetime 表单内容。</p>
 
 <p>创建文件 app/inputs/date_time_input.rb
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">DateTimeInput</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="ss">SimpleForm</span><span class="p">:</span><span class="ss">:Inputs</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">input</span><span class="p">()</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;@builder.text_field(attribute_name, input_html_options.merge( { class: &#39;datetime&#39;, value: object.send( attribute_name ) } ))</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:ruby %}
+class DateTimeInput &lt; SimpleForm::Inputs::Base
+  def input()</p>
+
+<pre><code>@builder.text_field(attribute_name, input_html_options.merge( { class: 'datetime', value: object.send( attribute_name ) } ))
+</code></pre>
+
+<p>  end
+end
+{% endcodeblock %}</p>
 
 <p>重新启动程序， 所有Datetime类型的字段都会自动生成这种时间选择表单， 并且时间是正确的了。</p>
 ]]></content>

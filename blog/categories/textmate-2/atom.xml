@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TextMate 2 | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/textmate-2/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T00:06:32+08:00</updated>
+  <updated>2014-01-15T17:07:31+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -28,33 +28,19 @@
 
 <p>安装 TM Ctag Bundle 之后 ^ + Command + P 报异常大概如下:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;ui.rb:308: in `to_plist&#39;: An object in the argument tree could not be converted (ArgumentError)</span>
-</span><span class='line'><span class="sr">    from ～/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">308</span><span class="ss">:in</span> <span class="sb">`block in initialize&#39;</span>
-</span><span class='line'><span class="sb">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `</span><span class="n">popen</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `initialize&#39;</span>
-</span><span class='line'>    <span class="n">from</span> <span class="err">～</span><span class="o">/</span><span class="no">Library</span><span class="o">/</span><span class="no">Application</span> <span class="no">Support</span><span class="o">/</span><span class="no">TextMate</span><span class="o">/</span><span class="no">Managed</span><span class="o">/</span><span class="no">Bundles</span><span class="o">/</span><span class="no">Bundle</span> <span class="no">Support</span><span class="o">.</span><span class="n">tmbundle</span><span class="o">/</span><span class="no">Support</span><span class="o">/</span><span class="n">shared</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ui</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">20</span><span class="ss">:in</span> <span class="sb">`new&#39;</span>
-</span><span class='line'><span class="sb">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `</span><span class="n">dialog</span><span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/progress.rb:42:in `call_with_progress&#39;</span>
-</span><span class='line'>    <span class="n">from</span> <span class="err">～</span><span class="o">/</span><span class="n">_test_tm</span><span class="o">.</span><span class="n">rb</span><span class="p">:</span><span class="mi">12</span><span class="ss">:in</span> <span class="sb">`&amp;lt;main&amp;gt;&#39;</span>
-</span><span class='line'><span class="sb">&lt;/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sb">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}</p>
+
+<pre><code>ui.rb:308: in `to_plist': An object in the argument tree could not be converted (ArgumentError)
+    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:308:in `block in initialize'
+    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `popen'
+    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:307:in `initialize'
+    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `new'
+    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/ui.rb:20:in `dialog'
+    from ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/progress.rb:42:in `call_with_progress'
+    from ～/_test_tm.rb:12:in `&lt;main&gt;'
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>其中关键是: ui.rb:308: in `to_plist': An object in the argument tree could not be converted
 如果你的异常是这个那么可以肯定的时候和我的情况一直。下面是我的一个临时解决方案。</p>
@@ -64,75 +50,53 @@
 
 <p>这个 bug 的解决有争议，TextMate 社区认为是 Ruby 的 bug，但网络上另一个解决方案认为是 TextMate 的 bug。</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx
-</span><span class='line'>git clone git://github.com/kballard/osx-plist.git
-</span><span class='line'><span class="nb">cd </span>osx-plist/ext/plist
-</span><span class='line'>ruby extconf.rb &amp;amp;&amp;amp; make
-</span><span class='line'><span class="nb">cd</span> ../../../
-</span><span class='line'>mv plist.bundle plist.bundle.old
-</span><span class='line'>cp osx-plist/ext/plist/plist.bundle ./plist.bundle
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+cd ~/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx
+git clone git://github.com/kballard/osx-plist.git
+cd osx-plist/ext/plist
+ruby extconf.rb &amp;&amp; make
+cd ../../../
+mv plist.bundle plist.bundle.old
+cp osx-plist/ext/plist/plist.bundle ./plist.bundle
+{% endcodeblock %}</p>
 
 <p>这样Ctag是可以正常运行的，但是会导致 Git Bundle 报错：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>dyld: lazy symbol binding failed: Symbol not found: &lt;em&gt;rb_intern2 Referenced from: ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
-</span><span class='line'>dyld: Symbol not found: &lt;/em&gt;rb_intern2 Referenced from: ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+dyld: lazy symbol binding failed: Symbol not found: <em>rb_intern2 Referenced from: ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
+dyld: Symbol not found: </em>rb_intern2 Referenced from: ～/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx/plist.bundle Expected in: flat namespace
+{% endcodeblock %}</p>
 
 <p>我的一个临时解决方案是：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx
-</span><span class='line'>git clone git://github.com/kballard/osx-plist.git
-</span><span class='line'><span class="nb">cd </span>osx-plist/ext/plist
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+cd ~/Library/Application Support/TextMate/Managed/Bundles/Bundle Support.tmbundle/Support/shared/lib/osx
+git clone git://github.com/kballard/osx-plist.git
+cd osx-plist/ext/plist
+{% endcodeblock %}</p>
 
 <p>打开 osx-plist/ext/plist 下的 plist.c 找到：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">/&lt;</span><span class="n">em</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="o">*</span> <span class="n">Document</span><span class="o">-</span><span class="n">class</span><span class="o">:</span> <span class="n">OSX</span><span class="o">::</span><span class="n">PropertyListError</span>
-</span><span class='line'> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">Init_plist</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">mOSX</span> <span class="o">=</span> <span class="n">rb_define_module</span><span class="p">(</span><span class="s">&quot;OSX&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="n">mPlist</span> <span class="o">=</span> <span class="n">rb_define_module_under</span><span class="p">(</span><span class="n">mOSX</span><span class="p">,</span> <span class="s">&quot;PropertyList&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:c %}
+/<em>
+ * Document-class: OSX::PropertyListError
+ </em>/
+void Init_plist() {</p>
+
+<pre><code>mOSX = rb_define_module("OSX");
+mPlist = rb_define_module_under(mOSX, "PropertyList");
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>将 <code>void Init_plist() {</code> 改为 <code>void Init_plist2() {</code> 后执行：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby extconf.rb &amp;amp;&amp;amp; make
-</span><span class='line'><span class="nb">cd</span> ../../../
-</span><span class='line'>mv plist.bundle.old plist.bundle
-</span><span class='line'>cp osx-plist/ext/plist/plist.bundle ./plist2.bundle
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:bash %}
+ruby extconf.rb &amp;&amp; make
+cd ../../../
+mv plist.bundle.old plist.bundle
+cp osx-plist/ext/plist/plist.bundle ./plist2.bundle
+{% endcodeblock %}</p>
 
 <p>找到 TM Ctag 的安装目录，我的是： ～/Library/Application Support/Avian/Pristine Copy/Bundles/tm-ctags.tmbundle/Support/bin
 修改 tmctags.rb 和 update_ctags.rb

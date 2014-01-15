@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bootstrap | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/bootstrap/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T00:06:32+08:00</updated>
+  <updated>2014-01-15T17:07:31+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -24,13 +24,17 @@
 
 <p>错误</p>
 
-<p>File to import not found or unreadable: susy (again!)</p>
+<p>{% codeblock lang:shell %}</p>
 
-<p>No application integration exists for rails</p>
+<p>File to import not found or unreadable: susy (again!)
+No application integration exists for rails</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>首先</p>
 
-<p>gem &lsquo;bootstrap-sass&rsquo;</p>
+<p>{% codeblock Gemfile lang:ruby %}
+gem &lsquo;bootstrap-sass&rsquo;</p>
 
 <p>group :assets do
   gem &lsquo;compass-rails&rsquo;
@@ -40,18 +44,20 @@ end</p>
 <p>cd /to/project/path/
 bundle
 bundle exec compass init rails ./
-bundle exec compass install susy</p>
+bundle exec compass install susy
+{% endcodeblock %}</p>
 
-<p>之后修改</p>
-
-<p>gem &lsquo;compass&rsquo;
+<p>之后修改
+{% codeblock Gemfile lang:ruby %}
+gem &lsquo;compass&rsquo;
 gem &lsquo;compass-rails&rsquo;
 gem &lsquo;compass-rails&rsquo;, github: &ldquo;Compass/compass-rails&rdquo;, branch: &ldquo;rails4-hack&rdquo;
 gem &ldquo;susy&rdquo;
 gem &lsquo;bootstrap-sass&rsquo;</p>
 
 <p>group :assets do
-end</p>
+end
+{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

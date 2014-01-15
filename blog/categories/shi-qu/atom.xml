@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 时区 | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/shi-qu/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T00:06:32+08:00</updated>
+  <updated>2014-01-15T17:07:31+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -28,38 +28,24 @@
 
 <p>  在 application.rb 文件中有一个时区的配置</p>
 
-<p>  <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;config.time_zone = &#39;Beijing&#39;</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  </span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>  {% codeblock lang:ruby %}</p>
+
+<pre><code>config.time_zone = 'Beijing'
+</code></pre>
+
+<p>  {% endcodeblock %}</p>
 
 <p>  这个配置文件是告诉 应用程序里面使用的时区是北京东八区（针对中国的应用就这样配置好了）。</p>
 
 <h3>第二套是数据库的存储的时区</h3>
 
 <p>  同样在 application.rb 文件中
-  <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;config.active_record.default_timezone = :local</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  </span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+  {% codeblock lang:ruby %}</p>
+
+<pre><code>config.active_record.default_timezone = :local
+</code></pre>
+
+<p>  {% endcodeblock %}</p>
 
 <p>  代表数据库中时区也用第一套， 一般情况下我们可以不做这个设置（即不添加这行到 application.rb 中）。
   如果我们的应用是考虑到国际化的话也不应该指定这个配置。</p>
@@ -80,34 +66,26 @@
 
 <p>再程序中正确的使用时间方法是：</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1"># 当前时间:</span>
-</span><span class='line'>  <span class="no">Time</span><span class="o">.</span><span class="n">current</span>
-</span><span class='line'>  <span class="c1"># 而</span>
-</span><span class='line'>  <span class="no">Time</span><span class="o">.</span><span class="n">now</span>
-</span><span class='line'>  <span class="c1"># 是使用的UTC时区</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+  # 当前时间:
+  Time.current
+  # 而
+  Time.now
+  # 是使用的UTC时区
+{% endcodeblock %}</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1"># 创建带有当前时区的时间对象：</span>
-</span><span class='line'>  <span class="no">Time</span><span class="o">.</span><span class="n">local</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
-</span><span class='line'>  <span class="c1"># 而</span>
-</span><span class='line'>  <span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
-</span><span class='line'>  <span class="c1"># 是没有时区的</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:ruby %}
+  # 创建带有当前时区的时间对象：
+  Time.local(2014,1,11,08,30,20)
+  # 而
+  Time.new(2014,1,11,08,30,20)
+  # 是没有时区的
+{% endcodeblock %}</p>
 
 <p>如何强制的把程序中 Time.current 的时区从第一套转换为第二套呢？ 方法也很简单：
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="no">Time</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">to_s</span><span class="p">(</span><span class="ss">:db</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock lang:ruby %}
+  Time.current.to_s(:db)
+{% endcodeblock %}</p>
 
 <p>当你想直接把时间带入sql语句比对时间的时候一定不要忘了做这个转换，否则您的时间比对就不正确了。</p>
 
