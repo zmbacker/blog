@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bootstrap | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/bootstrap/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T17:07:31+08:00</updated>
+  <updated>2014-01-15T17:08:58+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -24,7 +24,7 @@
 
 <p>错误</p>
 
-<p>{% codeblock lang:shell %}</p>
+<p>{% codeblock lang:base %}</p>
 
 <p>File to import not found or unreadable: susy (again!)
 No application integration exists for rails</p>
