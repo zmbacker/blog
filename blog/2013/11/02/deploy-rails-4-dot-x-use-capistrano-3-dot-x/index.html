@@ -9,8 +9,19 @@
   <meta name="author" content="Lester Zhao">
 
   
-  <meta name="description" content="PATH add to
-~/.bashrc set :bundle_flags, &lsquo;&mdash;quiet&rsquo; DEBUG [ec59288d] The &mdash;deployment flag requires a Gemfile.lock. Please make &hellip;">
+  <meta name="description" content="部署使用的账号 要把ruby的PATH 添加到 ～/.bashrc 目录 ~/.bashrc 1
+set :bundle_flags, &#39;--quiet&#39; 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+DEBUG [ec59288d] The --deployment flag &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,24 +113,43 @@
   </header>
 
 
-<div class="entry-content"><p>PATH add to
-~/.bashrc</p>
+<div class="entry-content"><p>部署使用的账号 要把ruby的PATH 添加到 ～/.bashrc 目录</p>
 
-<p>set :bundle_flags, &lsquo;&mdash;quiet&rsquo;</p>
+<p><code>~/.bashrc</code></p>
 
-<p>DEBUG [ec59288d]        The &mdash;deployment flag requires a Gemfile.lock. Please make sure you have checked
-DEBUG [ec59288d]        your Gemfile.lock into version control before deploying.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">set</span> <span class="ss">:bundle_flags</span><span class="p">,</span> <span class="s1">&#39;--quiet&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>need Gemfile.lock
-capistrano   your Gemfile.lock into version control before deploying.</p>
 
-<p> INFO [76a73a08] Running /usr/bin/env rake assets:precompile on izstudy.com
-DEBUG [76a73a08] Command: cd /var/www/izmeeting/releases/20131102010425 &amp;&amp; ( RAILS_ENV= /usr/bin/env rake assets:precompile )
-DEBUG [76a73a08]        rake aborted!
-DEBUG [76a73a08]        database configuration does not specify adapter</p>
 
-<p>bundle config &mdash;delete bin
-bundle config &mdash;delete bin    # Turn off Bundler&rsquo;s stub generator</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>DEBUG [ec59288d]        The --deployment flag requires a Gemfile.lock. Please make sure you have checked
+</span><span class='line'>DEBUG [ec59288d]        your Gemfile.lock into version control before deploying.
+</span><span class='line'>
+</span><span class='line'>need Gemfile.lock
+</span><span class='line'>capistrano   your Gemfile.lock into version control before deploying.
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'> INFO [76a73a08] Running /usr/bin/env rake assets:precompile on izstudy.com
+</span><span class='line'>DEBUG [76a73a08] Command: cd /var/www/izmeeting/releases/20131102010425 &amp;&amp; ( RAILS_ENV= /usr/bin/env rake assets:precompile )
+</span><span class='line'>DEBUG [76a73a08]        rake aborted!
+</span><span class='line'>DEBUG [76a73a08]        database configuration does not specify adapter
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>bundle config --delete bin    # Turn off Bundler's stub generator</code></p>
 </div>
 
 

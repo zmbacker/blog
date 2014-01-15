@@ -4,7 +4,7 @@
   <title><![CDATA[Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T17:18:46+08:00</updated>
+  <updated>2014-01-15T17:30:47+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -224,24 +224,43 @@
     <link href="http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x/"/>
     <updated>2013-11-02T01:12:00+08:00</updated>
     <id>http://lester.izstudy.com/blog/2013/11/02/deploy-rails-4-dot-x-use-capistrano-3-dot-x</id>
-    <content type="html"><![CDATA[<p>PATH add to
-~/.bashrc</p>
+    <content type="html"><![CDATA[<p>部署使用的账号 要把ruby的PATH 添加到 ～/.bashrc 目录</p>
 
-<p>set :bundle_flags, &lsquo;&mdash;quiet&rsquo;</p>
+<p><code>~/.bashrc</code></p>
 
-<p>DEBUG [ec59288d]        The &mdash;deployment flag requires a Gemfile.lock. Please make sure you have checked
-DEBUG [ec59288d]        your Gemfile.lock into version control before deploying.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">set</span> <span class="ss">:bundle_flags</span><span class="p">,</span> <span class="s1">&#39;--quiet&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>need Gemfile.lock
-capistrano   your Gemfile.lock into version control before deploying.</p>
 
-<p> INFO [76a73a08] Running /usr/bin/env rake assets:precompile on izstudy.com
-DEBUG [76a73a08] Command: cd /var/www/izmeeting/releases/20131102010425 &amp;&amp; ( RAILS_ENV= /usr/bin/env rake assets:precompile )
-DEBUG [76a73a08]        rake aborted!
-DEBUG [76a73a08]        database configuration does not specify adapter</p>
 
-<p>bundle config &mdash;delete bin
-bundle config &mdash;delete bin    # Turn off Bundler&rsquo;s stub generator</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>DEBUG [ec59288d]        The --deployment flag requires a Gemfile.lock. Please make sure you have checked
+</span><span class='line'>DEBUG [ec59288d]        your Gemfile.lock into version control before deploying.
+</span><span class='line'>
+</span><span class='line'>need Gemfile.lock
+</span><span class='line'>capistrano   your Gemfile.lock into version control before deploying.
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'> INFO [76a73a08] Running /usr/bin/env rake assets:precompile on izstudy.com
+</span><span class='line'>DEBUG [76a73a08] Command: cd /var/www/izmeeting/releases/20131102010425 &amp;&amp; ( RAILS_ENV= /usr/bin/env rake assets:precompile )
+</span><span class='line'>DEBUG [76a73a08]        rake aborted!
+</span><span class='line'>DEBUG [76a73a08]        database configuration does not specify adapter
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>bundle config --delete bin    # Turn off Bundler's stub generator</code></p>
 ]]></content>
   </entry>
   
@@ -250,7 +269,7 @@ bundle config &mdash;delete bin    # Turn off Bundler&rsquo;s stub generator</p>
     <link href="http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4/"/>
     <updated>2013-10-23T20:17:00+08:00</updated>
     <id>http://lester.izstudy.com/blog/2013/10/23/using-compass-and-bootstrap-in-rails-4</id>
-    <content type="html"><![CDATA[<blockquote><p>这篇文章内容已经过期  Compass_rails 的新版本已经可以支持 Rails 4.<br/>目前用最新的 compass_rails 正常方法使用已经没有问题。</p></blockquote>
+    <content type="html"><![CDATA[<blockquote><p>这篇文章内容已经过期  compass_rails 的新版本已经可以支持 Rails 4.<br/>目前用最新的 compass_rails 正常方法使用已经没有问题。</p></blockquote>
 
 
 <p><a href="http://compass-style.org">Compass</a></p>
