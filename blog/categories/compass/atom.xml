@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Compass | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/compass/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T17:08:58+08:00</updated>
+  <updated>2014-01-15T17:09:29+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -24,40 +24,66 @@
 
 <p>错误</p>
 
-<p>{% codeblock lang:base %}</p>
-
-<p>File to import not found or unreadable: susy (again!)
-No application integration exists for rails</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;File to import not found or unreadable: susy (again!)</span>
+</span><span class='line'><span class="sr">No application integration exists for rails&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>首先</p>
 
-<p>{% codeblock Gemfile lang:ruby %}
-gem &lsquo;bootstrap-sass&rsquo;</p>
-
-<p>group :assets do
-  gem &lsquo;compass-rails&rsquo;
-  gem &ldquo;susy&rdquo;
-end</p>
-
-<p>cd /to/project/path/
-bundle
-bundle exec compass init rails ./
-bundle exec compass install susy
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Gemfile </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">bootstrap</span><span class="o">-</span><span class="n">sass</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;group :assets do</span>
+</span><span class='line'><span class="sr">  gem &amp;lsquo;compass-rails&amp;rsquo;</span>
+</span><span class='line'><span class="sr">  gem &amp;ldquo;susy&amp;rdquo;</span>
+</span><span class='line'><span class="sr">end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">cd</span> <span class="sr">/to/</span><span class="n">project</span><span class="o">/</span><span class="n">path</span><span class="o">/</span>
+</span><span class='line'><span class="n">bundle</span>
+</span><span class='line'><span class="n">bundle</span> <span class="nb">exec</span> <span class="n">compass</span> <span class="n">init</span> <span class="n">rails</span> <span class="o">.</span><span class="n">/</span>
+</span><span class='line'><span class="n">bundle</span> <span class="nb">exec</span> <span class="n">compass</span> <span class="n">install</span> <span class="n">susy</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>之后修改
-{% codeblock Gemfile lang:ruby %}
-gem &lsquo;compass&rsquo;
-gem &lsquo;compass-rails&rsquo;
-gem &lsquo;compass-rails&rsquo;, github: &ldquo;Compass/compass-rails&rdquo;, branch: &ldquo;rails4-hack&rdquo;
-gem &ldquo;susy&rdquo;
-gem &lsquo;bootstrap-sass&rsquo;</p>
-
-<p>group :assets do
-end
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Gemfile </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">compass</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">compass</span><span class="o">-</span><span class="n">rails</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">compass</span><span class="o">-</span><span class="n">rails</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="ss">github</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Compass</span><span class="o">/</span><span class="n">compass</span><span class="o">-</span><span class="n">rails</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="ss">branch</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">rails4</span><span class="o">-</span><span class="n">hack</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">susy</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
+</span><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">bootstrap</span><span class="o">-</span><span class="n">sass</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;group :assets do</span>
+</span><span class='line'><span class="sr">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

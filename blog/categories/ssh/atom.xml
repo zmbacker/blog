@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ssh | Lester Zhao's Blog]]></title>
   <link href="http://lester.izstudy.com/blog/categories/ssh/atom.xml" rel="self"/>
   <link href="http://lester.izstudy.com/"/>
-  <updated>2014-01-15T17:08:58+08:00</updated>
+  <updated>2014-01-15T17:09:29+08:00</updated>
   <id>http://lester.izstudy.com/</id>
   <author>
     <name><![CDATA[Lester Zhao]]></name>
@@ -55,37 +55,69 @@
 我是用 Sublime Text 2 创建的。</p>
 
 <p>文件的内容如下：<br/>
-{% codeblock lang:xml %}</p>
-
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
-&lt;plist version="1.0"&gt;
-  &lt;dict&gt;
-    &lt;key&gt;Label&lt;/key&gt;
-      &lt;string&gt;localdomain.localhost.ssh-d&lt;/string&gt;
-    &lt;key&gt;ProgramArguments&lt;/key&gt;
-      &lt;array&gt;
-        &lt;string&gt;/usr/local/bin/autossh&lt;/string&gt;
-        &lt;string&gt;-M&lt;/string&gt;
-        &lt;string&gt;8118&lt;/string&gt;
-        &lt;string&gt;-nNT&lt;/string&gt;
-        &lt;string&gt;-D&lt;/string&gt;
-        &lt;string&gt;8117&lt;/string&gt;
-        &lt;string&gt;root@sshhost.com&lt;/string&gt;
-      &lt;/array&gt;
-    &lt;key&gt;KeepAlive&lt;/key&gt;
-      &lt;true/&gt;
-    &lt;key&gt;RunAtLoad&lt;/key&gt;
-      &lt;true/&gt;
-    &lt;key&gt;StandardOutPath&lt;/key&gt;
-      &lt;string&gt;/var/log/ssh-d-out.log&lt;/string&gt;
-    &lt;key&gt;StandardErrorPath&lt;/key&gt;
-      &lt;string&gt;/var/log/ssh-d-err.log&lt;/string&gt;
-  &lt;/dict&gt;
-&lt;/plist&gt;
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;pre&gt;&lt;code&gt;</span><span class="ni">&amp;lt;</span>?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?<span class="ni">&amp;gt;</span>
+</span><span class='line'><span class="ni">&amp;lt;</span>!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;<span class="ni">&amp;gt;</span>
+</span><span class='line'><span class="ni">&amp;lt;</span>plist version=&quot;1.0&quot;<span class="ni">&amp;gt;</span>
+</span><span class='line'>  <span class="ni">&amp;lt;</span>dict<span class="ni">&amp;gt;</span>
+</span><span class='line'>    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>Label<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>localdomain.localhost.ssh-d<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>ProgramArguments<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>array<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>/usr/local/bin/autossh<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>-M<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>8118<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>-nNT<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>-D<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>8117<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>root@sshhost.com<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>/array<span class="ni">&amp;gt;</span>
+</span><span class='line'>    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>KeepAlive<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>true/<span class="ni">&amp;gt;</span>
+</span><span class='line'>    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>RunAtLoad<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>true/<span class="ni">&amp;gt;</span>
+</span><span class='line'>    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>StandardOutPath<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>/var/log/ssh-d-out.log<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>StandardErrorPath<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+</span><span class='line'>      <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>/var/log/ssh-d-err.log<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+</span><span class='line'>  <span class="ni">&amp;lt;</span>/dict<span class="ni">&amp;gt;</span>
+</span><span class='line'><span class="ni">&amp;lt;</span>/plist<span class="ni">&amp;gt;</span>
+</span><span class='line'><span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>打开终端执行命令： <br/>
 <code>launchctl load ~/Library/LaunchAgents/ssh-d.plist</code></p>
