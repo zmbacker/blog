@@ -1,3 +1,4 @@
 This is my blog source.
 
-[lester.izstudy.com]
+[http://lester.izstudy.com](http://lester.izstudy.com)
+
