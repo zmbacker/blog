@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sublime Text | Lester Zhao's Blog]]></title>
+  <link href="http://lester.izstudy.com/blog/categories/sublime-text/atom.xml" rel="self"/>
+  <link href="http://lester.izstudy.com/"/>
+  <updated>2014-02-13T12:13:06+08:00</updated>
+  <id>http://lester.izstudy.com/</id>
+  <author>
+    <name><![CDATA[Lester Zhao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[很久之前给 Sublime Text 写的一个 Ruby Formater 插件]]></title>
+    <link href="http://lester.izstudy.com/blog/2014/02/13/a-ruby-formater-for-sublime-text/"/>
+    <updated>2014-02-13T11:53:00+08:00</updated>
+    <id>http://lester.izstudy.com/blog/2014/02/13/a-ruby-formater-for-sublime-text</id>
+    <content type="html"><![CDATA[<p>一年前业曾经使用过一段 Sublime Text 这个编辑器来开发。 这个编辑器整体的使用体验还是相当不错的。 虽然我现在是用 Textmate 2 开发， 但是我转到 TM 不是因为 Sublime Text 不好， 而是我个人更喜欢 TM 2.</p>
+
+<p>当时用 Sublime 的时候感觉格式化 ruby 代码没有太好的解决方案， 主要有 BeautifyRuby 这个插件是用 Ruby 写的， 要想运行他首先要配置要ruby环境， 在 Mac 下默认有 ruby，linux 平台下可以用apt-get，yum等直接安装ruby 比较容。 但是再Windows平台下 确需要下载安装使用不是很方便。 所以我用 Python 写了这个格式化的插件。 让windows平台使用更容易，而且 Sublime 原生支持 Python。 这个插件最大的好处就是开包即用， 运行效率也很高。</p>
+
+<p>本来是写给自己玩的， 突然有一天在网上逛 发现了下面这个连接：</p>
+
+<p><a href="https://sublime.wbond.net/packages/RubyFormat">https://sublime.wbond.net/packages/RubyFormat</a></p>
+
+<p>没想到这么个插件也有8k的下载量了， 有时间我也得更新优化一下了。</p>
+
+<p>如果你是再 Windows 平台使用 Sublime Text 2 写 Ruby、Rails 代码， 你可以尝试使用 RubyFormat 这个插件。 希望能对大家有点帮助。</p>
+
+<p>项目地址： <a href="https://github.com/zmbacker/RubyFormat">RubyFormat</a></p>
+]]></content>
+  </entry>
+  
+</feed>
